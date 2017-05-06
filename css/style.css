@@ -74,18 +74,18 @@ h6 {
 #services h4 {
     color: #F4CD76;
 }
-.profile-item h5 {
+.about-item h5 {
     cursor: pointer;
     color: #000505;
 }
-a, .btn, .navbar, .form-control, .portfolio-item-description {
+a, .btn, .navbar, .form-control, .information-item-description {
     -webkit-transition: all 0.125s ease-in-out 0s;
     -moz-transition: all 0.125s ease-in-out 0s;
     -ms-transition: all 0.125s ease-in-out 0s;
     -o-transition: all 0.125s ease-in-out 0s;
     transition: all 0.125s ease-in-out 0s;
 }
-.portfolio-item-preview {
+.information-item-preview {
     -webkit-transition: all 0.3s ease-in-out 0s;
     -moz-transition: all 0.3s ease-in-out 0s;
     -ms-transition: all 0.3s ease-in-out 0s;
@@ -392,12 +392,12 @@ h3>.fa {
 .page .widget-social li a {
     background: #F4CD76;
 }
-#profile-contact {
+#about-contact {
     box-shadow: 0 0 4px rgba(0, 0, 0, .2);
     padding: 20px 0;
     border-top: 5px solid #F4CD76;
 }
-.profile-item i {
+.about-item i {
     display: block;
     line-height: 42px;
     font-size: 32px;
@@ -405,7 +405,7 @@ h3>.fa {
 }
 .conInfo{
 }
-.profile-widget {
+.about-widget {
     margin-bottom: 40px;
 }
 .widget-social {
@@ -452,7 +452,7 @@ h3>.fa {
     margin-top: 20px;
 }
 
-.portfolio-item {
+.information-item {
   color: #F7F9F9;
   width: auto;
   height: 20rem;
@@ -463,11 +463,11 @@ h3>.fa {
     margin-bottom: 20px;
     overflow: hidden;
 }
-.portfolio-item-preview {
+.information-item-preview {
     position: relative;
     text-align: center;
 }
-.portfolio-item:hover .portfolio-item-preview {
+.information-item:hover .information-item-preview {
   color: white;
     -webkit-transform: scale(1.1) rotate(2deg);
     -moz-transform: scale(1.3) rotate(3deg);
@@ -475,13 +475,13 @@ h3>.fa {
     -o-transform: scale(1.3) rotate(3deg);
     transform: scale(1.2) rotate(3deg);
 }
-.portfolio-item:hover .portfolio-item-description {
+.information-item:hover .information-item-description {
     color: #F7F9F9;
     background-color: #000505;
     opacity: 1;
     bottom: 0;
 }
-.portfolio-item-description {
+.information-item-description {
     background: rgba(211, 168, 0, .8);
     /*background: red;*/
     position: absolute;
@@ -495,15 +495,15 @@ h3>.fa {
     border-radius: 3px;
     box-shadow: 0px 2px 10px 2px #54494B;
 }
-.portfolio-item-description h3
+.information-item-description h3
 {
   color: #F7F9F9;
 }
-#portfolio, #profile, #services, #resume{
+#information, #about, #services, #contact{
   padding: 5rem;
 }
 
-#portfolio::before, #profile::before, #services::before, #resume::before{
+#information::before, #about::before, #services::before, #contact::before{
   content:"";
   position: absolute;
   top:0;
@@ -518,7 +518,7 @@ h3>.fa {
   padding-top: 5rem;
 }
 
-#portfolio img {
+#information img {
   width: 100%;
 }
 
@@ -551,7 +551,7 @@ h3>.fa {
     .wrapper {
         text-align: center;
     }
-    #profile-contact .profile-item {
+    #about-contact .about-item {
         margin: 0 0 20px;
     }
     #stats .stat {
