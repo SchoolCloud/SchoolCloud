@@ -1,42 +1,39 @@
-/*Oxygen and Raleway Font Imports*/
-@import url('https://fonts.googleapis.com/css?family=Oxygen|Raleway');
-/*font-family: 'Oxygen', sans-serif;*/
-/*font-family: 'Raleway', sans-serif;*/
-
-/*ColorScheme:
-   Maroon: #800000
-   Ghost White:  #F7F9F9
-   Dark Liver:  #54494B
-   Rich Black: #000505
-   Topaz: #F4CD76*/
-
+@import url(//fonts.googleapis.com/css?family=Fira+Sans:400,700);
+@import url(//fonts.googleapis.com/css?family=Lato:400,300,700);
 body {
-    font-family: 'Oxygen', sans-serif;
+    font: 300 15px/1.6 'Lato', sans-serif;
     color: #545454;
     font-weight: bold;
+    background-image: url("../img/WhiteBackground3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size:cover;
 }
 
-p{
-  font-family: 'Raleway', sans-serif;
+nav img {
+  max-width: 30px;
+  max-height: 30px;
 }
-
 .pome {
-    color: #F4CD76;
+    color: coral;
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
 a {
-    color: #000505;
+    color: black;
 }
 a:hover {
-    color: #54494B;
+    color: #C4C4C4;
 }
 h1, h2, h3, h4, h5, h6 {
-    font: 400 46px/1.2 'Oxygen', sans-serif;
+    font: 400 46px/1.2 'Lato', sans-serif;
     margin: 5px 0 5px;
-    color: #000505;
+    color: #222;
 }
 h1 {
     font-size: 64px;
@@ -48,11 +45,11 @@ h2 {
     font-weight: 700;
 }
 h3 {
-    color: #54494B;
-    font-size: 22px;
+    color: #000;
+    font-size: 1.75rem;
     text-transform: uppercase;
     margin: 5px 0 15px;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 h4 {
     font-size: 16px;
@@ -65,11 +62,11 @@ h6 {
     font-size: 13px;
 }
 #services h4 {
-    color: #000505;
+    color: coral;
 }
 .profile-item h5 {
     cursor: pointer;
-    color: #000505;
+    color: black;
 }
 a, .btn, .navbar, .form-control, .portfolio-item-description {
     -webkit-transition: all 0.125s ease-in-out 0s;
@@ -85,6 +82,7 @@ a, .btn, .navbar, .form-control, .portfolio-item-description {
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 }
+
 .btn, .panel, .progress, .form-control, .modal-content, .form-control:hover, .form-control:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -96,7 +94,7 @@ a, .btn, .navbar, .form-control, .portfolio-item-description {
     border-radius: 3px;
 }
 .form-control {
-    background: red;
+    background: #FFF;
     border: 2px solid #C4C4C4;
     height: 54px;
     font-size: 14px;
@@ -233,7 +231,10 @@ section.callout {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom;
+    border-top: 2px solid coral;
+    border-bottom: 2px solid coral;
 }
+
 #services {
     padding: 0;
 }
@@ -325,24 +326,24 @@ h3>.fa {
     }
 }
 .navbar {
-    background: #800000;
+    background: rgba(0,0,0,.75);
     border-radius: 0;
     border: 0;
-    padding: 20px 0;
+    padding: 10px 0;
     text-transform: uppercase;
-    color: #F7F9F9 !important;
+    color: #FFF !important;
 }
 .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus, .navbar-custom .nav li.active {
     background: none;
     outline: 0;
-    color: #F4CD76;
+    color: coral;
 }
 .navbar-custom .navbar-brand {
-    font: 700 18px/1.2 'Oxygen', sans-serif;
-    color: #F7F9F9;
+    font: 700 18px/1.2 'Lato', sans-serif;
+    color: #FFF;
 }
 .navbar-custom .navbar-nav>li.active {
-    border-bottom: 3px solid #F7F9F9;
+    border-bottom: 3px solid coral;
 }
 .navbar-custom .navbar-toggle .icon-bar {
     background: #FFF;
@@ -350,12 +351,13 @@ h3>.fa {
 .navbar-custom .navbar-nav>li>a, .navbar-custom .navbar-nav .dropdown-menu>li>a {
     color: #FFF;
     font-size: 15px;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 .navbar-color, .custom-collapse {
-    background: #ecf0f1;
+    background: rgba(255,255,255,.82);
     box-shadow: 0 0 4px rgba(0, 0, 0, .2);
     padding: 0;
+    border-bottom: 1px solid coral;
 }
 .navbar-color .navbar-brand, .custom-collapse .navbar-brand, .navbar-color .navbar-nav>li>a, .navbar-color .navbar-nav .dropdown-menu>li>a, .custom-collapse .navbar-nav>li>a, .custom-collapse .navbar-nav .dropdown-menu>li>a {
     color: coral;
@@ -388,7 +390,7 @@ h3>.fa {
 }
 #intro h3, #resume h4 {
     color: coral;
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 .hello {
     margin: 0 0 100px;
@@ -399,6 +401,7 @@ h3>.fa {
 #profile-contact {
     box-shadow: 0 0 4px rgba(0, 0, 0, .2);
     padding: 20px 0;
+    border-top: 5px solid coral;
 }
 .profile-item i {
     display: block;
@@ -454,7 +457,11 @@ h3>.fa {
 .owl-theme .owl-controls .owl-pagination {
     margin-top: 20px;
 }
+
 .portfolio-item {
+  color: white;
+  width: auto;
+  height: 20rem;
     -webkit-margin-bottom: 20px;
     -moz-margin-bottom: 20px;
     -ms-margin-bottom: 20px;
@@ -464,8 +471,10 @@ h3>.fa {
 }
 .portfolio-item-preview {
     position: relative;
+    text-align: center;
 }
 .portfolio-item:hover .portfolio-item-preview {
+  color: white;
     -webkit-transform: scale(1.1) rotate(2deg);
     -moz-transform: scale(1.3) rotate(3deg);
     -ms-transform: scale(1.3) rotate(3deg);
@@ -473,6 +482,8 @@ h3>.fa {
     transform: scale(1.2) rotate(3deg);
 }
 .portfolio-item:hover .portfolio-item-description {
+    color: white;
+    background-color: coral;
     opacity: 1;
     bottom: 0;
 }
@@ -482,16 +493,45 @@ h3>.fa {
     right: 0;
     bottom: -70px;
     left: 0;
-    padding: 20px;
+    padding: .75rem;
     text-align: center;
     opacity: 0;
     color: white;
     border-radius: 3px;
     box-shadow: 0px 2px 10px 2px #666;
 }
+.portfolio-item-description h3
+{
+  color: white;
+}
+#portfolio, #profile, #services, #resume{
+  padding: 5rem;
+}
+
+#portfolio::before, #profile::before, #services::before, #resume::before{
+  content:"";
+  position: absolute;
+  top:0;
+  left:50%;
+  width: 40%;
+  height: 1px;
+  margin-left: -20%;
+  background: coral;
+}
+
+.separator{
+  padding-top: 5rem;
+}
+
+#portfolio img {
+  width: 100%;
+}
+
 #contact {
-    background: #18191a;
+    background: black;
     color: #FFF;
+    padding: 0;
+    /*background-image: url("../img/WhiteBackground3.jpg");*/
 }
 #contact h1, #contact h2, #contact h3, #contact h4, #contact h5, #contact h6 {
     color: #FFF;
@@ -504,7 +544,7 @@ h3>.fa {
 }
 #footer {
     text-align: center;
-    background: #141414;
+    background: black;
     padding: 20px 0;
     color: #FFF;
 }
@@ -522,6 +562,7 @@ h3>.fa {
     #stats .stat {
         margin: 0 0 20px;
     }
+
 }
 .map {
     background: #18191a;
