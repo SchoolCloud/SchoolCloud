@@ -1,0 +1,11 @@
+Oxygen and Raleway Font Imports
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Raleway');
+font-family: 'Oxygen', sans-serif;
+font-family: 'Raleway', sans-serif;
+
+ColorScheme:
+   Maroon: #800000
+   Ghost White:  #F7F9F9
+   Dark Liver:  #54494B
+   Rich Black: #000505
+   Topaz: #F4CD76
