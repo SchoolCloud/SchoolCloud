@@ -229,6 +229,7 @@ section.callout {
 
 #services {
     padding: 0;
+    height: 50rem;
 }
 #services .fa {
     color: #000505;
