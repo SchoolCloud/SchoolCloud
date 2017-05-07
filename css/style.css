@@ -216,14 +216,15 @@ a, .btn, .navbar, .form-control, .information-item-description {
     padding: 120px 0;
 }
 section.callout {
-    /*background: url("../img/techBackground.jpg");*/
-    background-color: #000505;
+    background: url("../img/techBackground.jpg");
+    /*background-color: #000505;*/
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom;
     border-top: 2px solid #800000;
     border-bottom: 2px solid #800000;
+    /*font: 'Raleway', sans-serif;*/
 }
 
 #services {
@@ -235,13 +236,17 @@ section.callout {
 .callout h3 {
     font-weight: bold;
     color: #F7F9F9;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+
 }
 .headline {
     margin: 0 0 60px;
 }
 .headline p {
     font-weight: 700;
-    color: #F7F9F9;
+    color: #000505;
 
 }
 .callout-btn {
@@ -386,6 +391,35 @@ h3>.fa {
     text-shadow: 1px 5px 5px black !important;
     font-family: 'Raleway', sans-serif;
 }
+/*.share-socials, .share-email {
+    vertical-align: top;
+    display: inline-block;
+    font-family: 'open_sansbold', Arial, sans-serif;
+    font-size: 12px;
+    line-height: 28px;
+    margin-left: 12px;
+    position: relative;
+    z-index: 10;
+}
+.share-social {
+    padding-left: 33px;
+    line-height: 28px;
+    position: relative;
+    cursor: pointer;
+}
+.last-social {
+    position: absolute;
+    left: -15px;
+    top: 40px;
+    opacity: 0;
+    visibility: hidden;
+    background: #e0e0e0;
+    width: 60px;
+    padding: 18px 0 1px;
+    -webkit-transition: opacity 0.5s, visibility 0.5s;
+    transition: opacity 0.5s, visibility 0.5s;
+  }*/
+
 .hello {
     margin: 0 0 100px;
 }
