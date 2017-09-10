@@ -213,11 +213,11 @@ a, .btn, .navbar, .form-control, .information-item-description {
 }
 .section, .callout {
     position: relative;
-    padding: 120px 0;
+    padding: 55px 0;
 }
 section.callout {
-    background: url("../img/techBackground.jpg");
-    /*background-color: #000505;*/
+    /*background: url("../img/techBackground.jpg");*/
+    background-color: #000505;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -225,6 +225,20 @@ section.callout {
     border-top: 2px solid #800000;
     border-bottom: 2px solid #800000;
     /*font: 'Raleway', sans-serif;*/
+}
+
+#contact{
+    border-bottom: 3.5px solid rgb(244, 205, 118);
+}
+
+#products {
+  background-color: #130526;
+  color: white;
+  border-bottom: 3.5px solid rgb(244, 205, 118);
+}
+
+.cardpad {
+  margin-top: 16px;
 }
 
 #services {
@@ -323,12 +337,15 @@ h3>.fa {
     }
 }
 .navbar {
-    background: rgba(128,0,0,.9);
+    /*background: rgba(128,0,0,.9);*/
+    background-color: #0f0f2a;
+    border-bottom: 3.5px solid rgb(244, 205, 118);
     border-radius: 0;
-    border: 0;
+    /*border: 0;*/
     padding: 10px 0;
     text-transform: uppercase;
     color: #800000 !important;
+    opacity: 1;
 }
 .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus, .navbar-custom .nav li.active {
     background: none;
@@ -372,17 +389,21 @@ h3>.fa {
 .navbar-color .navbar-toggle .icon-bar, .custom-collapse .navbar-toggle .icon-bar {
     background: #F4CD76;
 }
+
+
 #intro {
-    padding: 260px 0 160px 0;
+    padding: 160px 0 120px 0;
     text-align: center;
     color: #F7F9F9;
     text-shadow: 1px 5px 5px black !important;
-    background: url("../img/booksBackground.jpg");
+    /*background: url("../img/booksBackground.jpg");*/
     /*background: url("../img/HeaderBackgroundOption2.PNG") ;*/
+    background-color: #000033;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
+    border-bottom: 3.5px solid rgb(244, 205, 118);
 }
 #intro h1, #intro h2, #intro h3, #intro h4, #intro h5, #intro h6 {
     color: #red;
@@ -420,6 +441,14 @@ h3>.fa {
     -webkit-transition: opacity 0.5s, visibility 0.5s;
     transition: opacity 0.5s, visibility 0.5s;
   }*/
+
+#about {
+      border-bottom: 3.5px solid rgb(244, 205, 118);
+}
+
+#mission {
+  margin-top: 50px;
+}
 
 .hello {
     margin: 0 0 100px;
@@ -538,7 +567,7 @@ h3>.fa {
   padding: 5rem;
 }
 
-#information::before, #about::before, #services::before, #contact::before{
+/*#information::before, #about::before, #services::before, #contact::before{
   content:"";
   position: absolute;
   top:0;
@@ -547,7 +576,7 @@ h3>.fa {
   height: 1px;
   margin-left: -20%;
   background: #800000;
-}
+}*/
 
 .separator{
   padding-top: 5rem;
@@ -574,7 +603,7 @@ h3>.fa {
 }
 #footer {
     text-align: center;
-    background: #000505;
+    background-color: #130526;
     padding: 20px 0;
     color: #F7F9F9;
 }

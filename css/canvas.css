@@ -1,0 +1,2831 @@
+/*** Feel free to use this mixin on your site, however pleae be sure to give
+credit for my work by linking back to www.tundratech.ca or this pen please.
+
+Please excuse my current crappy website, it is years out of date.
+I have a massive portfolio and redesign I will begin March 31, 2014.
+I will also be availiable for hire after this date.
+
+This pen has been a desire of mine ever since I once saw full color aurora
+during the time when HALE-BOPP was visiting. Usually aurora is blue-green
+due to heavy nitrogen in the atmosphere. Full coloraurora come from oxygen
+and usually appear further south (but the south is less likely to see aurora).
+
+Questions? Comments? Suggestion for performance improvement?
+
+DJ Sumanik
+www.tundratech.ca
+dj@tundratech.ca
+
+***/
+#intro {
+  background: #000 url("http://i1.ytimg.com/vi/T40NSkd7Olc/maxresdefault.jpg");
+  margin: 0;
+  padding: 0;
+}
+
+.ray {
+  position: absolute;
+  top: 0;
+  border-radius: 20px;
+  z-index: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -khtml-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.ray:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 7%, transparent 25%, black 90%);
+}
+/*.ray:nth-child(2) {
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  margin: auto;
+  top: -20px;
+  left: 0;
+  z-index: 9999;
+  opacity: 0.7;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-animation: light-field 42000ms ease-in-out infinite alternate;
+  -khtml-animation: light-field 42000ms ease-in-out infinite alternate;
+  -moz-animation: light-field 42000ms ease-in-out infinite alternate;
+  -ms-animation: light-field 42000ms ease-in-out infinite alternate;
+  -o-animation: light-field 42000ms ease-in-out infinite alternate;
+  animation: light-field 42000ms ease-in-out infinite alternate;
+}*/
+.ray:nth-child(3) {
+  left: 61%;
+  height: 288px;
+  margin-top: -100px;
+  width: 4px;
+  background: #ff5900;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6733ms infinite, wiggle3 ease-in-out 6127ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6733ms infinite, wiggle3 ease-in-out 6127ms infinite;
+  -moz-animation: sml-fade ease-in-out 6733ms infinite, wiggle3 ease-in-out 6127ms infinite;
+  -ms-animation: sml-fade ease-in-out 6733ms infinite, wiggle3 ease-in-out 6127ms infinite;
+  -o-animation: sml-fade ease-in-out 6733ms infinite, wiggle3 ease-in-out 6127ms infinite;
+  animation: sml-fade ease-in-out 6733ms infinite, wiggle3 ease-in-out 6127ms infinite;
+}
+.ray:nth-child(4) {
+  left: 71%;
+  height: 351px;
+  margin-top: -100px;
+  width: 3px;
+  background: #ff7700;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6892ms infinite, wiggle1 ease-in-out 6132ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6892ms infinite, wiggle1 ease-in-out 6132ms infinite;
+  -moz-animation: sml-fade ease-in-out 6892ms infinite, wiggle1 ease-in-out 6132ms infinite;
+  -ms-animation: sml-fade ease-in-out 6892ms infinite, wiggle1 ease-in-out 6132ms infinite;
+  -o-animation: sml-fade ease-in-out 6892ms infinite, wiggle1 ease-in-out 6132ms infinite;
+  animation: sml-fade ease-in-out 6892ms infinite, wiggle1 ease-in-out 6132ms infinite;
+}
+.ray:nth-child(5) {
+  left: 97%;
+  height: 152px;
+  margin-top: -100px;
+  width: 4px;
+  background: #ff9500;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6510ms infinite, wiggle3 ease-in-out 6206ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6510ms infinite, wiggle3 ease-in-out 6206ms infinite;
+  -moz-animation: sml-fade ease-in-out 6510ms infinite, wiggle3 ease-in-out 6206ms infinite;
+  -ms-animation: sml-fade ease-in-out 6510ms infinite, wiggle3 ease-in-out 6206ms infinite;
+  -o-animation: sml-fade ease-in-out 6510ms infinite, wiggle3 ease-in-out 6206ms infinite;
+  animation: sml-fade ease-in-out 6510ms infinite, wiggle3 ease-in-out 6206ms infinite;
+}
+.ray:nth-child(6) {
+  left: 4%;
+  height: 315px;
+  margin-top: -100px;
+  width: 4px;
+  background: #ffb300;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6329ms infinite, wiggle2 ease-in-out 6485ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6329ms infinite, wiggle2 ease-in-out 6485ms infinite;
+  -moz-animation: sml-fade ease-in-out 6329ms infinite, wiggle2 ease-in-out 6485ms infinite;
+  -ms-animation: sml-fade ease-in-out 6329ms infinite, wiggle2 ease-in-out 6485ms infinite;
+  -o-animation: sml-fade ease-in-out 6329ms infinite, wiggle2 ease-in-out 6485ms infinite;
+  animation: sml-fade ease-in-out 6329ms infinite, wiggle2 ease-in-out 6485ms infinite;
+}
+.ray:nth-child(7) {
+  left: 43%;
+  height: 235px;
+  margin-top: -100px;
+  width: 3px;
+  background: #ffd000;
+  -webkit-filter: blur(8.4px);
+  -khtml-filter: blur(8.4px);
+  -moz-filter: blur(8.4px);
+  -ms-filter: blur(8.4px);
+  -o-filter: blur(8.4px);
+  filter: blur(8.4px);
+  -webkit-animation: sml-fade ease-in-out 6089ms infinite, wiggle3 ease-in-out 6675ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6089ms infinite, wiggle3 ease-in-out 6675ms infinite;
+  -moz-animation: sml-fade ease-in-out 6089ms infinite, wiggle3 ease-in-out 6675ms infinite;
+  -ms-animation: sml-fade ease-in-out 6089ms infinite, wiggle3 ease-in-out 6675ms infinite;
+  -o-animation: sml-fade ease-in-out 6089ms infinite, wiggle3 ease-in-out 6675ms infinite;
+  animation: sml-fade ease-in-out 6089ms infinite, wiggle3 ease-in-out 6675ms infinite;
+}
+.ray:nth-child(8) {
+  left: 19%;
+  height: 133px;
+  margin-top: -100px;
+  width: 4px;
+  background: #ffee00;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6358ms infinite, wiggle3 ease-in-out 6806ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6358ms infinite, wiggle3 ease-in-out 6806ms infinite;
+  -moz-animation: sml-fade ease-in-out 6358ms infinite, wiggle3 ease-in-out 6806ms infinite;
+  -ms-animation: sml-fade ease-in-out 6358ms infinite, wiggle3 ease-in-out 6806ms infinite;
+  -o-animation: sml-fade ease-in-out 6358ms infinite, wiggle3 ease-in-out 6806ms infinite;
+  animation: sml-fade ease-in-out 6358ms infinite, wiggle3 ease-in-out 6806ms infinite;
+}
+.ray:nth-child(9) {
+  left: 68%;
+  height: 384px;
+  margin-top: -100px;
+  width: 4px;
+  background: #f2ff00;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6183ms infinite, wiggle1 ease-in-out 6229ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6183ms infinite, wiggle1 ease-in-out 6229ms infinite;
+  -moz-animation: sml-fade ease-in-out 6183ms infinite, wiggle1 ease-in-out 6229ms infinite;
+  -ms-animation: sml-fade ease-in-out 6183ms infinite, wiggle1 ease-in-out 6229ms infinite;
+  -o-animation: sml-fade ease-in-out 6183ms infinite, wiggle1 ease-in-out 6229ms infinite;
+  animation: sml-fade ease-in-out 6183ms infinite, wiggle1 ease-in-out 6229ms infinite;
+}
+.ray:nth-child(10) {
+  left: 70%;
+  height: 170px;
+  margin-top: -100px;
+  width: 4px;
+  background: #d5ff00;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6720ms infinite, wiggle1 ease-in-out 6706ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6720ms infinite, wiggle1 ease-in-out 6706ms infinite;
+  -moz-animation: sml-fade ease-in-out 6720ms infinite, wiggle1 ease-in-out 6706ms infinite;
+  -ms-animation: sml-fade ease-in-out 6720ms infinite, wiggle1 ease-in-out 6706ms infinite;
+  -o-animation: sml-fade ease-in-out 6720ms infinite, wiggle1 ease-in-out 6706ms infinite;
+  animation: sml-fade ease-in-out 6720ms infinite, wiggle1 ease-in-out 6706ms infinite;
+}
+.ray:nth-child(11) {
+  left: 13%;
+  height: 342px;
+  margin-top: -100px;
+  width: 3px;
+  background: #b7ff00;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6339ms infinite, wiggle3 ease-in-out 6723ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6339ms infinite, wiggle3 ease-in-out 6723ms infinite;
+  -moz-animation: sml-fade ease-in-out 6339ms infinite, wiggle3 ease-in-out 6723ms infinite;
+  -ms-animation: sml-fade ease-in-out 6339ms infinite, wiggle3 ease-in-out 6723ms infinite;
+  -o-animation: sml-fade ease-in-out 6339ms infinite, wiggle3 ease-in-out 6723ms infinite;
+  animation: sml-fade ease-in-out 6339ms infinite, wiggle3 ease-in-out 6723ms infinite;
+}
+.ray:nth-child(12) {
+  left: 84%;
+  height: 344px;
+  margin-top: -100px;
+  width: 3px;
+  background: #99ff00;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6644ms infinite, wiggle3 ease-in-out 6241ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6644ms infinite, wiggle3 ease-in-out 6241ms infinite;
+  -moz-animation: sml-fade ease-in-out 6644ms infinite, wiggle3 ease-in-out 6241ms infinite;
+  -ms-animation: sml-fade ease-in-out 6644ms infinite, wiggle3 ease-in-out 6241ms infinite;
+  -o-animation: sml-fade ease-in-out 6644ms infinite, wiggle3 ease-in-out 6241ms infinite;
+  animation: sml-fade ease-in-out 6644ms infinite, wiggle3 ease-in-out 6241ms infinite;
+}
+.ray:nth-child(13) {
+  left: 86%;
+  height: 131px;
+  margin-top: -100px;
+  width: 3px;
+  background: #7bff00;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6389ms infinite, wiggle2 ease-in-out 6694ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6389ms infinite, wiggle2 ease-in-out 6694ms infinite;
+  -moz-animation: sml-fade ease-in-out 6389ms infinite, wiggle2 ease-in-out 6694ms infinite;
+  -ms-animation: sml-fade ease-in-out 6389ms infinite, wiggle2 ease-in-out 6694ms infinite;
+  -o-animation: sml-fade ease-in-out 6389ms infinite, wiggle2 ease-in-out 6694ms infinite;
+  animation: sml-fade ease-in-out 6389ms infinite, wiggle2 ease-in-out 6694ms infinite;
+}
+.ray:nth-child(14) {
+  left: 45%;
+  height: 223px;
+  margin-top: -100px;
+  width: 3px;
+  background: #5eff00;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6436ms infinite, wiggle2 ease-in-out 6671ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6436ms infinite, wiggle2 ease-in-out 6671ms infinite;
+  -moz-animation: sml-fade ease-in-out 6436ms infinite, wiggle2 ease-in-out 6671ms infinite;
+  -ms-animation: sml-fade ease-in-out 6436ms infinite, wiggle2 ease-in-out 6671ms infinite;
+  -o-animation: sml-fade ease-in-out 6436ms infinite, wiggle2 ease-in-out 6671ms infinite;
+  animation: sml-fade ease-in-out 6436ms infinite, wiggle2 ease-in-out 6671ms infinite;
+}
+.ray:nth-child(15) {
+  left: 38%;
+  height: 414px;
+  margin-top: -100px;
+  width: 3px;
+  background: #40ff00;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6536ms infinite, wiggle2 ease-in-out 6365ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6536ms infinite, wiggle2 ease-in-out 6365ms infinite;
+  -moz-animation: sml-fade ease-in-out 6536ms infinite, wiggle2 ease-in-out 6365ms infinite;
+  -ms-animation: sml-fade ease-in-out 6536ms infinite, wiggle2 ease-in-out 6365ms infinite;
+  -o-animation: sml-fade ease-in-out 6536ms infinite, wiggle2 ease-in-out 6365ms infinite;
+  animation: sml-fade ease-in-out 6536ms infinite, wiggle2 ease-in-out 6365ms infinite;
+}
+.ray:nth-child(16) {
+  left: 61%;
+  height: 442px;
+  margin-top: -100px;
+  width: 4px;
+  background: #22ff00;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6330ms infinite, wiggle2 ease-in-out 6313ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6330ms infinite, wiggle2 ease-in-out 6313ms infinite;
+  -moz-animation: sml-fade ease-in-out 6330ms infinite, wiggle2 ease-in-out 6313ms infinite;
+  -ms-animation: sml-fade ease-in-out 6330ms infinite, wiggle2 ease-in-out 6313ms infinite;
+  -o-animation: sml-fade ease-in-out 6330ms infinite, wiggle2 ease-in-out 6313ms infinite;
+  animation: sml-fade ease-in-out 6330ms infinite, wiggle2 ease-in-out 6313ms infinite;
+}
+.ray:nth-child(17) {
+  left: 100%;
+  height: 241px;
+  margin-top: -100px;
+  width: 4px;
+  background: #04ff00;
+  -webkit-filter: blur(11.4px);
+  -khtml-filter: blur(11.4px);
+  -moz-filter: blur(11.4px);
+  -ms-filter: blur(11.4px);
+  -o-filter: blur(11.4px);
+  filter: blur(11.4px);
+  -webkit-animation: sml-fade ease-in-out 6501ms infinite, wiggle3 ease-in-out 6755ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6501ms infinite, wiggle3 ease-in-out 6755ms infinite;
+  -moz-animation: sml-fade ease-in-out 6501ms infinite, wiggle3 ease-in-out 6755ms infinite;
+  -ms-animation: sml-fade ease-in-out 6501ms infinite, wiggle3 ease-in-out 6755ms infinite;
+  -o-animation: sml-fade ease-in-out 6501ms infinite, wiggle3 ease-in-out 6755ms infinite;
+  animation: sml-fade ease-in-out 6501ms infinite, wiggle3 ease-in-out 6755ms infinite;
+}
+.ray:nth-child(18) {
+  left: 22%;
+  height: 237px;
+  margin-top: -100px;
+  width: 3px;
+  background: #00ff1a;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6534ms infinite, wiggle2 ease-in-out 6600ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6534ms infinite, wiggle2 ease-in-out 6600ms infinite;
+  -moz-animation: sml-fade ease-in-out 6534ms infinite, wiggle2 ease-in-out 6600ms infinite;
+  -ms-animation: sml-fade ease-in-out 6534ms infinite, wiggle2 ease-in-out 6600ms infinite;
+  -o-animation: sml-fade ease-in-out 6534ms infinite, wiggle2 ease-in-out 6600ms infinite;
+  animation: sml-fade ease-in-out 6534ms infinite, wiggle2 ease-in-out 6600ms infinite;
+}
+.ray:nth-child(19) {
+  left: 61%;
+  height: 339px;
+  margin-top: -100px;
+  width: 3px;
+  background: #00ff37;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6143ms infinite, wiggle1 ease-in-out 6247ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6143ms infinite, wiggle1 ease-in-out 6247ms infinite;
+  -moz-animation: sml-fade ease-in-out 6143ms infinite, wiggle1 ease-in-out 6247ms infinite;
+  -ms-animation: sml-fade ease-in-out 6143ms infinite, wiggle1 ease-in-out 6247ms infinite;
+  -o-animation: sml-fade ease-in-out 6143ms infinite, wiggle1 ease-in-out 6247ms infinite;
+  animation: sml-fade ease-in-out 6143ms infinite, wiggle1 ease-in-out 6247ms infinite;
+}
+.ray:nth-child(20) {
+  left: 85%;
+  height: 177px;
+  margin-top: -100px;
+  width: 3px;
+  background: #00ff55;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6110ms infinite, wiggle1 ease-in-out 6939ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6110ms infinite, wiggle1 ease-in-out 6939ms infinite;
+  -moz-animation: sml-fade ease-in-out 6110ms infinite, wiggle1 ease-in-out 6939ms infinite;
+  -ms-animation: sml-fade ease-in-out 6110ms infinite, wiggle1 ease-in-out 6939ms infinite;
+  -o-animation: sml-fade ease-in-out 6110ms infinite, wiggle1 ease-in-out 6939ms infinite;
+  animation: sml-fade ease-in-out 6110ms infinite, wiggle1 ease-in-out 6939ms infinite;
+}
+.ray:nth-child(21) {
+  left: 88%;
+  height: 315px;
+  margin-top: -100px;
+  width: 3px;
+  background: #00ff73;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6886ms infinite, wiggle3 ease-in-out 6450ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6886ms infinite, wiggle3 ease-in-out 6450ms infinite;
+  -moz-animation: sml-fade ease-in-out 6886ms infinite, wiggle3 ease-in-out 6450ms infinite;
+  -ms-animation: sml-fade ease-in-out 6886ms infinite, wiggle3 ease-in-out 6450ms infinite;
+  -o-animation: sml-fade ease-in-out 6886ms infinite, wiggle3 ease-in-out 6450ms infinite;
+  animation: sml-fade ease-in-out 6886ms infinite, wiggle3 ease-in-out 6450ms infinite;
+}
+.ray:nth-child(22) {
+  left: 38%;
+  height: 151px;
+  margin-top: -100px;
+  width: 4px;
+  background: #00ff91;
+  -webkit-filter: blur(12.4px);
+  -khtml-filter: blur(12.4px);
+  -moz-filter: blur(12.4px);
+  -ms-filter: blur(12.4px);
+  -o-filter: blur(12.4px);
+  filter: blur(12.4px);
+  -webkit-animation: sml-fade ease-in-out 6879ms infinite, wiggle1 ease-in-out 6609ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6879ms infinite, wiggle1 ease-in-out 6609ms infinite;
+  -moz-animation: sml-fade ease-in-out 6879ms infinite, wiggle1 ease-in-out 6609ms infinite;
+  -ms-animation: sml-fade ease-in-out 6879ms infinite, wiggle1 ease-in-out 6609ms infinite;
+  -o-animation: sml-fade ease-in-out 6879ms infinite, wiggle1 ease-in-out 6609ms infinite;
+  animation: sml-fade ease-in-out 6879ms infinite, wiggle1 ease-in-out 6609ms infinite;
+}
+.ray:nth-child(23) {
+  left: 50%;
+  height: 140px;
+  margin-top: -100px;
+  width: 3px;
+  background: #00ffae;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6977ms infinite, wiggle3 ease-in-out 6729ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6977ms infinite, wiggle3 ease-in-out 6729ms infinite;
+  -moz-animation: sml-fade ease-in-out 6977ms infinite, wiggle3 ease-in-out 6729ms infinite;
+  -ms-animation: sml-fade ease-in-out 6977ms infinite, wiggle3 ease-in-out 6729ms infinite;
+  -o-animation: sml-fade ease-in-out 6977ms infinite, wiggle3 ease-in-out 6729ms infinite;
+  animation: sml-fade ease-in-out 6977ms infinite, wiggle3 ease-in-out 6729ms infinite;
+}
+.ray:nth-child(24) {
+  left: 60%;
+  height: 139px;
+  margin-top: -100px;
+  width: 3px;
+  background: #00ffcc;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6468ms infinite, wiggle2 ease-in-out 6999ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6468ms infinite, wiggle2 ease-in-out 6999ms infinite;
+  -moz-animation: sml-fade ease-in-out 6468ms infinite, wiggle2 ease-in-out 6999ms infinite;
+  -ms-animation: sml-fade ease-in-out 6468ms infinite, wiggle2 ease-in-out 6999ms infinite;
+  -o-animation: sml-fade ease-in-out 6468ms infinite, wiggle2 ease-in-out 6999ms infinite;
+  animation: sml-fade ease-in-out 6468ms infinite, wiggle2 ease-in-out 6999ms infinite;
+}
+.ray:nth-child(25) {
+  left: 54%;
+  height: 312px;
+  margin-top: -100px;
+  width: 4px;
+  background: #00ffea;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6606ms infinite, wiggle3 ease-in-out 6577ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6606ms infinite, wiggle3 ease-in-out 6577ms infinite;
+  -moz-animation: sml-fade ease-in-out 6606ms infinite, wiggle3 ease-in-out 6577ms infinite;
+  -ms-animation: sml-fade ease-in-out 6606ms infinite, wiggle3 ease-in-out 6577ms infinite;
+  -o-animation: sml-fade ease-in-out 6606ms infinite, wiggle3 ease-in-out 6577ms infinite;
+  animation: sml-fade ease-in-out 6606ms infinite, wiggle3 ease-in-out 6577ms infinite;
+}
+.ray:nth-child(26) {
+  left: 18%;
+  height: 430px;
+  margin-top: -100px;
+  width: 4px;
+  background: #00f7ff;
+  -webkit-filter: blur(12.4px);
+  -khtml-filter: blur(12.4px);
+  -moz-filter: blur(12.4px);
+  -ms-filter: blur(12.4px);
+  -o-filter: blur(12.4px);
+  filter: blur(12.4px);
+  -webkit-animation: sml-fade ease-in-out 6800ms infinite, wiggle2 ease-in-out 6573ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6800ms infinite, wiggle2 ease-in-out 6573ms infinite;
+  -moz-animation: sml-fade ease-in-out 6800ms infinite, wiggle2 ease-in-out 6573ms infinite;
+  -ms-animation: sml-fade ease-in-out 6800ms infinite, wiggle2 ease-in-out 6573ms infinite;
+  -o-animation: sml-fade ease-in-out 6800ms infinite, wiggle2 ease-in-out 6573ms infinite;
+  animation: sml-fade ease-in-out 6800ms infinite, wiggle2 ease-in-out 6573ms infinite;
+}
+.ray:nth-child(27) {
+  left: 34%;
+  height: 209px;
+  margin-top: -100px;
+  width: 3px;
+  background: #00d9ff;
+  -webkit-filter: blur(8.4px);
+  -khtml-filter: blur(8.4px);
+  -moz-filter: blur(8.4px);
+  -ms-filter: blur(8.4px);
+  -o-filter: blur(8.4px);
+  filter: blur(8.4px);
+  -webkit-animation: sml-fade ease-in-out 6036ms infinite, wiggle1 ease-in-out 6560ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6036ms infinite, wiggle1 ease-in-out 6560ms infinite;
+  -moz-animation: sml-fade ease-in-out 6036ms infinite, wiggle1 ease-in-out 6560ms infinite;
+  -ms-animation: sml-fade ease-in-out 6036ms infinite, wiggle1 ease-in-out 6560ms infinite;
+  -o-animation: sml-fade ease-in-out 6036ms infinite, wiggle1 ease-in-out 6560ms infinite;
+  animation: sml-fade ease-in-out 6036ms infinite, wiggle1 ease-in-out 6560ms infinite;
+}
+.ray:nth-child(28) {
+  left: 18%;
+  height: 271px;
+  margin-top: -100px;
+  width: 4px;
+  background: #00bbff;
+  -webkit-filter: blur(12.4px);
+  -khtml-filter: blur(12.4px);
+  -moz-filter: blur(12.4px);
+  -ms-filter: blur(12.4px);
+  -o-filter: blur(12.4px);
+  filter: blur(12.4px);
+  -webkit-animation: sml-fade ease-in-out 6579ms infinite, wiggle3 ease-in-out 6874ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6579ms infinite, wiggle3 ease-in-out 6874ms infinite;
+  -moz-animation: sml-fade ease-in-out 6579ms infinite, wiggle3 ease-in-out 6874ms infinite;
+  -ms-animation: sml-fade ease-in-out 6579ms infinite, wiggle3 ease-in-out 6874ms infinite;
+  -o-animation: sml-fade ease-in-out 6579ms infinite, wiggle3 ease-in-out 6874ms infinite;
+  animation: sml-fade ease-in-out 6579ms infinite, wiggle3 ease-in-out 6874ms infinite;
+}
+.ray:nth-child(29) {
+  left: 97%;
+  height: 375px;
+  margin-top: -100px;
+  width: 3px;
+  background: #009dff;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6272ms infinite, wiggle1 ease-in-out 6926ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6272ms infinite, wiggle1 ease-in-out 6926ms infinite;
+  -moz-animation: sml-fade ease-in-out 6272ms infinite, wiggle1 ease-in-out 6926ms infinite;
+  -ms-animation: sml-fade ease-in-out 6272ms infinite, wiggle1 ease-in-out 6926ms infinite;
+  -o-animation: sml-fade ease-in-out 6272ms infinite, wiggle1 ease-in-out 6926ms infinite;
+  animation: sml-fade ease-in-out 6272ms infinite, wiggle1 ease-in-out 6926ms infinite;
+}
+.ray:nth-child(30) {
+  left: 77%;
+  height: 184px;
+  margin-top: -100px;
+  width: 3px;
+  background: #0080ff;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6103ms infinite, wiggle2 ease-in-out 6448ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6103ms infinite, wiggle2 ease-in-out 6448ms infinite;
+  -moz-animation: sml-fade ease-in-out 6103ms infinite, wiggle2 ease-in-out 6448ms infinite;
+  -ms-animation: sml-fade ease-in-out 6103ms infinite, wiggle2 ease-in-out 6448ms infinite;
+  -o-animation: sml-fade ease-in-out 6103ms infinite, wiggle2 ease-in-out 6448ms infinite;
+  animation: sml-fade ease-in-out 6103ms infinite, wiggle2 ease-in-out 6448ms infinite;
+}
+.ray:nth-child(31) {
+  left: 29%;
+  height: 327px;
+  margin-top: -100px;
+  width: 4px;
+  background: #0062ff;
+  -webkit-filter: blur(11.4px);
+  -khtml-filter: blur(11.4px);
+  -moz-filter: blur(11.4px);
+  -ms-filter: blur(11.4px);
+  -o-filter: blur(11.4px);
+  filter: blur(11.4px);
+  -webkit-animation: sml-fade ease-in-out 6660ms infinite, wiggle2 ease-in-out 6097ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6660ms infinite, wiggle2 ease-in-out 6097ms infinite;
+  -moz-animation: sml-fade ease-in-out 6660ms infinite, wiggle2 ease-in-out 6097ms infinite;
+  -ms-animation: sml-fade ease-in-out 6660ms infinite, wiggle2 ease-in-out 6097ms infinite;
+  -o-animation: sml-fade ease-in-out 6660ms infinite, wiggle2 ease-in-out 6097ms infinite;
+  animation: sml-fade ease-in-out 6660ms infinite, wiggle2 ease-in-out 6097ms infinite;
+}
+.ray:nth-child(32) {
+  left: 68%;
+  height: 210px;
+  margin-top: -100px;
+  width: 4px;
+  background: #0044ff;
+  -webkit-filter: blur(12.4px);
+  -khtml-filter: blur(12.4px);
+  -moz-filter: blur(12.4px);
+  -ms-filter: blur(12.4px);
+  -o-filter: blur(12.4px);
+  filter: blur(12.4px);
+  -webkit-animation: sml-fade ease-in-out 6869ms infinite, wiggle3 ease-in-out 6697ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6869ms infinite, wiggle3 ease-in-out 6697ms infinite;
+  -moz-animation: sml-fade ease-in-out 6869ms infinite, wiggle3 ease-in-out 6697ms infinite;
+  -ms-animation: sml-fade ease-in-out 6869ms infinite, wiggle3 ease-in-out 6697ms infinite;
+  -o-animation: sml-fade ease-in-out 6869ms infinite, wiggle3 ease-in-out 6697ms infinite;
+  animation: sml-fade ease-in-out 6869ms infinite, wiggle3 ease-in-out 6697ms infinite;
+}
+.ray:nth-child(33) {
+  left: 18%;
+  height: 411px;
+  margin-top: -100px;
+  width: 3px;
+  background: #0026ff;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6537ms infinite, wiggle2 ease-in-out 6781ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6537ms infinite, wiggle2 ease-in-out 6781ms infinite;
+  -moz-animation: sml-fade ease-in-out 6537ms infinite, wiggle2 ease-in-out 6781ms infinite;
+  -ms-animation: sml-fade ease-in-out 6537ms infinite, wiggle2 ease-in-out 6781ms infinite;
+  -o-animation: sml-fade ease-in-out 6537ms infinite, wiggle2 ease-in-out 6781ms infinite;
+  animation: sml-fade ease-in-out 6537ms infinite, wiggle2 ease-in-out 6781ms infinite;
+}
+.ray:nth-child(34) {
+  left: 87%;
+  height: 275px;
+  margin-top: -100px;
+  width: 4px;
+  background: #0009ff;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6672ms infinite, wiggle2 ease-in-out 6475ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6672ms infinite, wiggle2 ease-in-out 6475ms infinite;
+  -moz-animation: sml-fade ease-in-out 6672ms infinite, wiggle2 ease-in-out 6475ms infinite;
+  -ms-animation: sml-fade ease-in-out 6672ms infinite, wiggle2 ease-in-out 6475ms infinite;
+  -o-animation: sml-fade ease-in-out 6672ms infinite, wiggle2 ease-in-out 6475ms infinite;
+  animation: sml-fade ease-in-out 6672ms infinite, wiggle2 ease-in-out 6475ms infinite;
+}
+.ray:nth-child(35) {
+  left: 89%;
+  height: 160px;
+  margin-top: -100px;
+  width: 4px;
+  background: #1500ff;
+  -webkit-filter: blur(11.4px);
+  -khtml-filter: blur(11.4px);
+  -moz-filter: blur(11.4px);
+  -ms-filter: blur(11.4px);
+  -o-filter: blur(11.4px);
+  filter: blur(11.4px);
+  -webkit-animation: sml-fade ease-in-out 6199ms infinite, wiggle3 ease-in-out 6445ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6199ms infinite, wiggle3 ease-in-out 6445ms infinite;
+  -moz-animation: sml-fade ease-in-out 6199ms infinite, wiggle3 ease-in-out 6445ms infinite;
+  -ms-animation: sml-fade ease-in-out 6199ms infinite, wiggle3 ease-in-out 6445ms infinite;
+  -o-animation: sml-fade ease-in-out 6199ms infinite, wiggle3 ease-in-out 6445ms infinite;
+  animation: sml-fade ease-in-out 6199ms infinite, wiggle3 ease-in-out 6445ms infinite;
+}
+.ray:nth-child(36) {
+  left: 54%;
+  height: 190px;
+  margin-top: -100px;
+  width: 4px;
+  background: #3300ff;
+  -webkit-filter: blur(12.4px);
+  -khtml-filter: blur(12.4px);
+  -moz-filter: blur(12.4px);
+  -ms-filter: blur(12.4px);
+  -o-filter: blur(12.4px);
+  filter: blur(12.4px);
+  -webkit-animation: sml-fade ease-in-out 6861ms infinite, wiggle3 ease-in-out 6303ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6861ms infinite, wiggle3 ease-in-out 6303ms infinite;
+  -moz-animation: sml-fade ease-in-out 6861ms infinite, wiggle3 ease-in-out 6303ms infinite;
+  -ms-animation: sml-fade ease-in-out 6861ms infinite, wiggle3 ease-in-out 6303ms infinite;
+  -o-animation: sml-fade ease-in-out 6861ms infinite, wiggle3 ease-in-out 6303ms infinite;
+  animation: sml-fade ease-in-out 6861ms infinite, wiggle3 ease-in-out 6303ms infinite;
+}
+.ray:nth-child(37) {
+  left: 9%;
+  height: 204px;
+  margin-top: -100px;
+  width: 4px;
+  background: #5100ff;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6902ms infinite, wiggle2 ease-in-out 6098ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6902ms infinite, wiggle2 ease-in-out 6098ms infinite;
+  -moz-animation: sml-fade ease-in-out 6902ms infinite, wiggle2 ease-in-out 6098ms infinite;
+  -ms-animation: sml-fade ease-in-out 6902ms infinite, wiggle2 ease-in-out 6098ms infinite;
+  -o-animation: sml-fade ease-in-out 6902ms infinite, wiggle2 ease-in-out 6098ms infinite;
+  animation: sml-fade ease-in-out 6902ms infinite, wiggle2 ease-in-out 6098ms infinite;
+}
+.ray:nth-child(38) {
+  left: 75%;
+  height: 293px;
+  margin-top: -100px;
+  width: 3px;
+  background: #6f00ff;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6357ms infinite, wiggle1 ease-in-out 6598ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6357ms infinite, wiggle1 ease-in-out 6598ms infinite;
+  -moz-animation: sml-fade ease-in-out 6357ms infinite, wiggle1 ease-in-out 6598ms infinite;
+  -ms-animation: sml-fade ease-in-out 6357ms infinite, wiggle1 ease-in-out 6598ms infinite;
+  -o-animation: sml-fade ease-in-out 6357ms infinite, wiggle1 ease-in-out 6598ms infinite;
+  animation: sml-fade ease-in-out 6357ms infinite, wiggle1 ease-in-out 6598ms infinite;
+}
+.ray:nth-child(39) {
+  left: 62%;
+  height: 307px;
+  margin-top: -100px;
+  width: 4px;
+  background: #8c00ff;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6672ms infinite, wiggle1 ease-in-out 6818ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6672ms infinite, wiggle1 ease-in-out 6818ms infinite;
+  -moz-animation: sml-fade ease-in-out 6672ms infinite, wiggle1 ease-in-out 6818ms infinite;
+  -ms-animation: sml-fade ease-in-out 6672ms infinite, wiggle1 ease-in-out 6818ms infinite;
+  -o-animation: sml-fade ease-in-out 6672ms infinite, wiggle1 ease-in-out 6818ms infinite;
+  animation: sml-fade ease-in-out 6672ms infinite, wiggle1 ease-in-out 6818ms infinite;
+}
+.ray:nth-child(40) {
+  left: 12%;
+  height: 219px;
+  margin-top: -100px;
+  width: 3px;
+  background: #aa00ff;
+  -webkit-filter: blur(8.4px);
+  -khtml-filter: blur(8.4px);
+  -moz-filter: blur(8.4px);
+  -ms-filter: blur(8.4px);
+  -o-filter: blur(8.4px);
+  filter: blur(8.4px);
+  -webkit-animation: sml-fade ease-in-out 6375ms infinite, wiggle3 ease-in-out 6705ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6375ms infinite, wiggle3 ease-in-out 6705ms infinite;
+  -moz-animation: sml-fade ease-in-out 6375ms infinite, wiggle3 ease-in-out 6705ms infinite;
+  -ms-animation: sml-fade ease-in-out 6375ms infinite, wiggle3 ease-in-out 6705ms infinite;
+  -o-animation: sml-fade ease-in-out 6375ms infinite, wiggle3 ease-in-out 6705ms infinite;
+  animation: sml-fade ease-in-out 6375ms infinite, wiggle3 ease-in-out 6705ms infinite;
+}
+.ray:nth-child(41) {
+  left: 71%;
+  height: 287px;
+  margin-top: -100px;
+  width: 4px;
+  background: #c800ff;
+  -webkit-filter: blur(12.4px);
+  -khtml-filter: blur(12.4px);
+  -moz-filter: blur(12.4px);
+  -ms-filter: blur(12.4px);
+  -o-filter: blur(12.4px);
+  filter: blur(12.4px);
+  -webkit-animation: sml-fade ease-in-out 6023ms infinite, wiggle3 ease-in-out 6796ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6023ms infinite, wiggle3 ease-in-out 6796ms infinite;
+  -moz-animation: sml-fade ease-in-out 6023ms infinite, wiggle3 ease-in-out 6796ms infinite;
+  -ms-animation: sml-fade ease-in-out 6023ms infinite, wiggle3 ease-in-out 6796ms infinite;
+  -o-animation: sml-fade ease-in-out 6023ms infinite, wiggle3 ease-in-out 6796ms infinite;
+  animation: sml-fade ease-in-out 6023ms infinite, wiggle3 ease-in-out 6796ms infinite;
+}
+.ray:nth-child(42) {
+  left: 65%;
+  height: 433px;
+  margin-top: -100px;
+  width: 3px;
+  background: #e600ff;
+  -webkit-filter: blur(8.4px);
+  -khtml-filter: blur(8.4px);
+  -moz-filter: blur(8.4px);
+  -ms-filter: blur(8.4px);
+  -o-filter: blur(8.4px);
+  filter: blur(8.4px);
+  -webkit-animation: sml-fade ease-in-out 6477ms infinite, wiggle1 ease-in-out 6494ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6477ms infinite, wiggle1 ease-in-out 6494ms infinite;
+  -moz-animation: sml-fade ease-in-out 6477ms infinite, wiggle1 ease-in-out 6494ms infinite;
+  -ms-animation: sml-fade ease-in-out 6477ms infinite, wiggle1 ease-in-out 6494ms infinite;
+  -o-animation: sml-fade ease-in-out 6477ms infinite, wiggle1 ease-in-out 6494ms infinite;
+  animation: sml-fade ease-in-out 6477ms infinite, wiggle1 ease-in-out 6494ms infinite;
+}
+.ray:nth-child(43) {
+  left: 86%;
+  height: 163px;
+  margin-top: -100px;
+  width: 4px;
+  background: #ff00fb;
+  -webkit-filter: blur(11.4px);
+  -khtml-filter: blur(11.4px);
+  -moz-filter: blur(11.4px);
+  -ms-filter: blur(11.4px);
+  -o-filter: blur(11.4px);
+  filter: blur(11.4px);
+  -webkit-animation: sml-fade ease-in-out 6184ms infinite, wiggle2 ease-in-out 6858ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6184ms infinite, wiggle2 ease-in-out 6858ms infinite;
+  -moz-animation: sml-fade ease-in-out 6184ms infinite, wiggle2 ease-in-out 6858ms infinite;
+  -ms-animation: sml-fade ease-in-out 6184ms infinite, wiggle2 ease-in-out 6858ms infinite;
+  -o-animation: sml-fade ease-in-out 6184ms infinite, wiggle2 ease-in-out 6858ms infinite;
+  animation: sml-fade ease-in-out 6184ms infinite, wiggle2 ease-in-out 6858ms infinite;
+}
+.ray:nth-child(44) {
+  left: 16%;
+  height: 243px;
+  margin-top: -100px;
+  width: 4px;
+  background: #ff00dd;
+  -webkit-filter: blur(12.4px);
+  -khtml-filter: blur(12.4px);
+  -moz-filter: blur(12.4px);
+  -ms-filter: blur(12.4px);
+  -o-filter: blur(12.4px);
+  filter: blur(12.4px);
+  -webkit-animation: sml-fade ease-in-out 6195ms infinite, wiggle2 ease-in-out 6802ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6195ms infinite, wiggle2 ease-in-out 6802ms infinite;
+  -moz-animation: sml-fade ease-in-out 6195ms infinite, wiggle2 ease-in-out 6802ms infinite;
+  -ms-animation: sml-fade ease-in-out 6195ms infinite, wiggle2 ease-in-out 6802ms infinite;
+  -o-animation: sml-fade ease-in-out 6195ms infinite, wiggle2 ease-in-out 6802ms infinite;
+  animation: sml-fade ease-in-out 6195ms infinite, wiggle2 ease-in-out 6802ms infinite;
+}
+.ray:nth-child(45) {
+  left: 9%;
+  height: 301px;
+  margin-top: -100px;
+  width: 4px;
+  background: #ff00bf;
+  -webkit-filter: blur(11.4px);
+  -khtml-filter: blur(11.4px);
+  -moz-filter: blur(11.4px);
+  -ms-filter: blur(11.4px);
+  -o-filter: blur(11.4px);
+  filter: blur(11.4px);
+  -webkit-animation: sml-fade ease-in-out 6467ms infinite, wiggle1 ease-in-out 6871ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6467ms infinite, wiggle1 ease-in-out 6871ms infinite;
+  -moz-animation: sml-fade ease-in-out 6467ms infinite, wiggle1 ease-in-out 6871ms infinite;
+  -ms-animation: sml-fade ease-in-out 6467ms infinite, wiggle1 ease-in-out 6871ms infinite;
+  -o-animation: sml-fade ease-in-out 6467ms infinite, wiggle1 ease-in-out 6871ms infinite;
+  animation: sml-fade ease-in-out 6467ms infinite, wiggle1 ease-in-out 6871ms infinite;
+}
+.ray:nth-child(46) {
+  left: 75%;
+  height: 443px;
+  margin-top: -100px;
+  width: 4px;
+  background: #ff00a2;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6894ms infinite, wiggle2 ease-in-out 6441ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6894ms infinite, wiggle2 ease-in-out 6441ms infinite;
+  -moz-animation: sml-fade ease-in-out 6894ms infinite, wiggle2 ease-in-out 6441ms infinite;
+  -ms-animation: sml-fade ease-in-out 6894ms infinite, wiggle2 ease-in-out 6441ms infinite;
+  -o-animation: sml-fade ease-in-out 6894ms infinite, wiggle2 ease-in-out 6441ms infinite;
+  animation: sml-fade ease-in-out 6894ms infinite, wiggle2 ease-in-out 6441ms infinite;
+}
+.ray:nth-child(47) {
+  left: 28%;
+  height: 328px;
+  margin-top: -100px;
+  width: 4px;
+  background: #ff0084;
+  -webkit-filter: blur(12.4px);
+  -khtml-filter: blur(12.4px);
+  -moz-filter: blur(12.4px);
+  -ms-filter: blur(12.4px);
+  -o-filter: blur(12.4px);
+  filter: blur(12.4px);
+  -webkit-animation: sml-fade ease-in-out 6219ms infinite, wiggle1 ease-in-out 6176ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6219ms infinite, wiggle1 ease-in-out 6176ms infinite;
+  -moz-animation: sml-fade ease-in-out 6219ms infinite, wiggle1 ease-in-out 6176ms infinite;
+  -ms-animation: sml-fade ease-in-out 6219ms infinite, wiggle1 ease-in-out 6176ms infinite;
+  -o-animation: sml-fade ease-in-out 6219ms infinite, wiggle1 ease-in-out 6176ms infinite;
+  animation: sml-fade ease-in-out 6219ms infinite, wiggle1 ease-in-out 6176ms infinite;
+}
+.ray:nth-child(48) {
+  left: 25%;
+  height: 213px;
+  margin-top: -100px;
+  width: 4px;
+  background: #ff0066;
+  -webkit-filter: blur(12.4px);
+  -khtml-filter: blur(12.4px);
+  -moz-filter: blur(12.4px);
+  -ms-filter: blur(12.4px);
+  -o-filter: blur(12.4px);
+  filter: blur(12.4px);
+  -webkit-animation: sml-fade ease-in-out 6710ms infinite, wiggle2 ease-in-out 6913ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6710ms infinite, wiggle2 ease-in-out 6913ms infinite;
+  -moz-animation: sml-fade ease-in-out 6710ms infinite, wiggle2 ease-in-out 6913ms infinite;
+  -ms-animation: sml-fade ease-in-out 6710ms infinite, wiggle2 ease-in-out 6913ms infinite;
+  -o-animation: sml-fade ease-in-out 6710ms infinite, wiggle2 ease-in-out 6913ms infinite;
+  animation: sml-fade ease-in-out 6710ms infinite, wiggle2 ease-in-out 6913ms infinite;
+}
+.ray:nth-child(49) {
+  left: 6%;
+  height: 134px;
+  margin-top: -100px;
+  width: 3px;
+  background: #ff0048;
+  -webkit-filter: blur(10.4px);
+  -khtml-filter: blur(10.4px);
+  -moz-filter: blur(10.4px);
+  -ms-filter: blur(10.4px);
+  -o-filter: blur(10.4px);
+  filter: blur(10.4px);
+  -webkit-animation: sml-fade ease-in-out 6573ms infinite, wiggle3 ease-in-out 6723ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6573ms infinite, wiggle3 ease-in-out 6723ms infinite;
+  -moz-animation: sml-fade ease-in-out 6573ms infinite, wiggle3 ease-in-out 6723ms infinite;
+  -ms-animation: sml-fade ease-in-out 6573ms infinite, wiggle3 ease-in-out 6723ms infinite;
+  -o-animation: sml-fade ease-in-out 6573ms infinite, wiggle3 ease-in-out 6723ms infinite;
+  animation: sml-fade ease-in-out 6573ms infinite, wiggle3 ease-in-out 6723ms infinite;
+}
+.ray:nth-child(50) {
+  left: 46%;
+  height: 263px;
+  margin-top: -100px;
+  width: 3px;
+  background: #ff002b;
+  -webkit-filter: blur(9.4px);
+  -khtml-filter: blur(9.4px);
+  -moz-filter: blur(9.4px);
+  -ms-filter: blur(9.4px);
+  -o-filter: blur(9.4px);
+  filter: blur(9.4px);
+  -webkit-animation: sml-fade ease-in-out 6337ms infinite, wiggle1 ease-in-out 6477ms infinite;
+  -khtml-animation: sml-fade ease-in-out 6337ms infinite, wiggle1 ease-in-out 6477ms infinite;
+  -moz-animation: sml-fade ease-in-out 6337ms infinite, wiggle1 ease-in-out 6477ms infinite;
+  -ms-animation: sml-fade ease-in-out 6337ms infinite, wiggle1 ease-in-out 6477ms infinite;
+  -o-animation: sml-fade ease-in-out 6337ms infinite, wiggle1 ease-in-out 6477ms infinite;
+  animation: sml-fade ease-in-out 6337ms infinite, wiggle1 ease-in-out 6477ms infinite;
+}
+.ray:nth-child(51) {
+  left: 26%;
+  height: 325px;
+  width: 21px;
+  background: #3300ff;
+  -webkit-filter: blur(21.17px);
+  -khtml-filter: blur(21.17px);
+  -moz-filter: blur(21.17px);
+  -ms-filter: blur(21.17px);
+  -o-filter: blur(21.17px);
+  filter: blur(21.17px);
+  -webkit-animation: med-fade ease-in-out 6346ms infinite, wiggle1 ease-in-out 8618ms infinite;
+  -khtml-animation: med-fade ease-in-out 6346ms infinite, wiggle1 ease-in-out 8618ms infinite;
+  -moz-animation: med-fade ease-in-out 6346ms infinite, wiggle1 ease-in-out 8618ms infinite;
+  -ms-animation: med-fade ease-in-out 6346ms infinite, wiggle1 ease-in-out 8618ms infinite;
+  -o-animation: med-fade ease-in-out 6346ms infinite, wiggle1 ease-in-out 8618ms infinite;
+  animation: med-fade ease-in-out 6346ms infinite, wiggle1 ease-in-out 8618ms infinite;
+}
+.ray:nth-child(52) {
+  left: 12%;
+  height: 324px;
+  width: 29px;
+  background: #6600ff;
+  -webkit-filter: blur(39.33px);
+  -khtml-filter: blur(39.33px);
+  -moz-filter: blur(39.33px);
+  -ms-filter: blur(39.33px);
+  -o-filter: blur(39.33px);
+  filter: blur(39.33px);
+  -webkit-animation: med-fade ease-in-out 6940ms infinite, wiggle3 ease-in-out 8955ms infinite;
+  -khtml-animation: med-fade ease-in-out 6940ms infinite, wiggle3 ease-in-out 8955ms infinite;
+  -moz-animation: med-fade ease-in-out 6940ms infinite, wiggle3 ease-in-out 8955ms infinite;
+  -ms-animation: med-fade ease-in-out 6940ms infinite, wiggle3 ease-in-out 8955ms infinite;
+  -o-animation: med-fade ease-in-out 6940ms infinite, wiggle3 ease-in-out 8955ms infinite;
+  animation: med-fade ease-in-out 6940ms infinite, wiggle3 ease-in-out 8955ms infinite;
+}
+.ray:nth-child(53) {
+  left: 93%;
+  height: 396px;
+  width: 26px;
+  background: #9900ff;
+  -webkit-filter: blur(42.02px);
+  -khtml-filter: blur(42.02px);
+  -moz-filter: blur(42.02px);
+  -ms-filter: blur(42.02px);
+  -o-filter: blur(42.02px);
+  filter: blur(42.02px);
+  -webkit-animation: med-fade ease-in-out 6540ms infinite, wiggle1 ease-in-out 13942ms infinite;
+  -khtml-animation: med-fade ease-in-out 6540ms infinite, wiggle1 ease-in-out 13942ms infinite;
+  -moz-animation: med-fade ease-in-out 6540ms infinite, wiggle1 ease-in-out 13942ms infinite;
+  -ms-animation: med-fade ease-in-out 6540ms infinite, wiggle1 ease-in-out 13942ms infinite;
+  -o-animation: med-fade ease-in-out 6540ms infinite, wiggle1 ease-in-out 13942ms infinite;
+  animation: med-fade ease-in-out 6540ms infinite, wiggle1 ease-in-out 13942ms infinite;
+}
+.ray:nth-child(54) {
+  left: 77%;
+  height: 206px;
+  width: 29px;
+  background: #cc00ff;
+  -webkit-filter: blur(26.33px);
+  -khtml-filter: blur(26.33px);
+  -moz-filter: blur(26.33px);
+  -ms-filter: blur(26.33px);
+  -o-filter: blur(26.33px);
+  filter: blur(26.33px);
+  -webkit-animation: med-fade ease-in-out 6117ms infinite, wiggle1 ease-in-out 14713ms infinite;
+  -khtml-animation: med-fade ease-in-out 6117ms infinite, wiggle1 ease-in-out 14713ms infinite;
+  -moz-animation: med-fade ease-in-out 6117ms infinite, wiggle1 ease-in-out 14713ms infinite;
+  -ms-animation: med-fade ease-in-out 6117ms infinite, wiggle1 ease-in-out 14713ms infinite;
+  -o-animation: med-fade ease-in-out 6117ms infinite, wiggle1 ease-in-out 14713ms infinite;
+  animation: med-fade ease-in-out 6117ms infinite, wiggle1 ease-in-out 14713ms infinite;
+}
+.ray:nth-child(55) {
+  left: 7%;
+  height: 161px;
+  width: 22px;
+  background: magenta;
+  -webkit-filter: blur(28.94px);
+  -khtml-filter: blur(28.94px);
+  -moz-filter: blur(28.94px);
+  -ms-filter: blur(28.94px);
+  -o-filter: blur(28.94px);
+  filter: blur(28.94px);
+  -webkit-animation: med-fade ease-in-out 6773ms infinite, wiggle2 ease-in-out 11197ms infinite;
+  -khtml-animation: med-fade ease-in-out 6773ms infinite, wiggle2 ease-in-out 11197ms infinite;
+  -moz-animation: med-fade ease-in-out 6773ms infinite, wiggle2 ease-in-out 11197ms infinite;
+  -ms-animation: med-fade ease-in-out 6773ms infinite, wiggle2 ease-in-out 11197ms infinite;
+  -o-animation: med-fade ease-in-out 6773ms infinite, wiggle2 ease-in-out 11197ms infinite;
+  animation: med-fade ease-in-out 6773ms infinite, wiggle2 ease-in-out 11197ms infinite;
+}
+.ray:nth-child(56) {
+  left: 92%;
+  height: 178px;
+  width: 28px;
+  background: #ff00cc;
+  -webkit-filter: blur(47.56px);
+  -khtml-filter: blur(47.56px);
+  -moz-filter: blur(47.56px);
+  -ms-filter: blur(47.56px);
+  -o-filter: blur(47.56px);
+  filter: blur(47.56px);
+  -webkit-animation: med-fade ease-in-out 6648ms infinite, wiggle2 ease-in-out 10575ms infinite;
+  -khtml-animation: med-fade ease-in-out 6648ms infinite, wiggle2 ease-in-out 10575ms infinite;
+  -moz-animation: med-fade ease-in-out 6648ms infinite, wiggle2 ease-in-out 10575ms infinite;
+  -ms-animation: med-fade ease-in-out 6648ms infinite, wiggle2 ease-in-out 10575ms infinite;
+  -o-animation: med-fade ease-in-out 6648ms infinite, wiggle2 ease-in-out 10575ms infinite;
+  animation: med-fade ease-in-out 6648ms infinite, wiggle2 ease-in-out 10575ms infinite;
+}
+.ray:nth-child(57) {
+  left: 30%;
+  height: 182px;
+  width: 17px;
+  background: #ff0099;
+  -webkit-filter: blur(16.09px);
+  -khtml-filter: blur(16.09px);
+  -moz-filter: blur(16.09px);
+  -ms-filter: blur(16.09px);
+  -o-filter: blur(16.09px);
+  filter: blur(16.09px);
+  -webkit-animation: med-fade ease-in-out 6897ms infinite, wiggle1 ease-in-out 10955ms infinite;
+  -khtml-animation: med-fade ease-in-out 6897ms infinite, wiggle1 ease-in-out 10955ms infinite;
+  -moz-animation: med-fade ease-in-out 6897ms infinite, wiggle1 ease-in-out 10955ms infinite;
+  -ms-animation: med-fade ease-in-out 6897ms infinite, wiggle1 ease-in-out 10955ms infinite;
+  -o-animation: med-fade ease-in-out 6897ms infinite, wiggle1 ease-in-out 10955ms infinite;
+  animation: med-fade ease-in-out 6897ms infinite, wiggle1 ease-in-out 10955ms infinite;
+}
+.ray:nth-child(58) {
+  left: 63%;
+  height: 326px;
+  width: 29px;
+  background: #ff0066;
+  -webkit-filter: blur(41.33px);
+  -khtml-filter: blur(41.33px);
+  -moz-filter: blur(41.33px);
+  -ms-filter: blur(41.33px);
+  -o-filter: blur(41.33px);
+  filter: blur(41.33px);
+  -webkit-animation: med-fade ease-in-out 6394ms infinite, wiggle2 ease-in-out 11549ms infinite;
+  -khtml-animation: med-fade ease-in-out 6394ms infinite, wiggle2 ease-in-out 11549ms infinite;
+  -moz-animation: med-fade ease-in-out 6394ms infinite, wiggle2 ease-in-out 11549ms infinite;
+  -ms-animation: med-fade ease-in-out 6394ms infinite, wiggle2 ease-in-out 11549ms infinite;
+  -o-animation: med-fade ease-in-out 6394ms infinite, wiggle2 ease-in-out 11549ms infinite;
+  animation: med-fade ease-in-out 6394ms infinite, wiggle2 ease-in-out 11549ms infinite;
+}
+.ray:nth-child(59) {
+  left: 25%;
+  height: 111px;
+  width: 21px;
+  background: #ff0033;
+  -webkit-filter: blur(27.17px);
+  -khtml-filter: blur(27.17px);
+  -moz-filter: blur(27.17px);
+  -ms-filter: blur(27.17px);
+  -o-filter: blur(27.17px);
+  filter: blur(27.17px);
+  -webkit-animation: med-fade ease-in-out 6250ms infinite, wiggle1 ease-in-out 6384ms infinite;
+  -khtml-animation: med-fade ease-in-out 6250ms infinite, wiggle1 ease-in-out 6384ms infinite;
+  -moz-animation: med-fade ease-in-out 6250ms infinite, wiggle1 ease-in-out 6384ms infinite;
+  -ms-animation: med-fade ease-in-out 6250ms infinite, wiggle1 ease-in-out 6384ms infinite;
+  -o-animation: med-fade ease-in-out 6250ms infinite, wiggle1 ease-in-out 6384ms infinite;
+  animation: med-fade ease-in-out 6250ms infinite, wiggle1 ease-in-out 6384ms infinite;
+}
+.ray:nth-child(60) {
+  left: 54%;
+  height: 258px;
+  width: 20px;
+  background: red;
+  -webkit-filter: blur(26.4px);
+  -khtml-filter: blur(26.4px);
+  -moz-filter: blur(26.4px);
+  -ms-filter: blur(26.4px);
+  -o-filter: blur(26.4px);
+  filter: blur(26.4px);
+  -webkit-animation: med-fade ease-in-out 6285ms infinite, wiggle3 ease-in-out 9972ms infinite;
+  -khtml-animation: med-fade ease-in-out 6285ms infinite, wiggle3 ease-in-out 9972ms infinite;
+  -moz-animation: med-fade ease-in-out 6285ms infinite, wiggle3 ease-in-out 9972ms infinite;
+  -ms-animation: med-fade ease-in-out 6285ms infinite, wiggle3 ease-in-out 9972ms infinite;
+  -o-animation: med-fade ease-in-out 6285ms infinite, wiggle3 ease-in-out 9972ms infinite;
+  animation: med-fade ease-in-out 6285ms infinite, wiggle3 ease-in-out 9972ms infinite;
+}
+.ray:nth-child(61) {
+  left: 23%;
+  height: 191px;
+  width: 28px;
+  background: #ff3300;
+  -webkit-filter: blur(36.56px);
+  -khtml-filter: blur(36.56px);
+  -moz-filter: blur(36.56px);
+  -ms-filter: blur(36.56px);
+  -o-filter: blur(36.56px);
+  filter: blur(36.56px);
+  -webkit-animation: med-fade ease-in-out 6259ms infinite, wiggle3 ease-in-out 12019ms infinite;
+  -khtml-animation: med-fade ease-in-out 6259ms infinite, wiggle3 ease-in-out 12019ms infinite;
+  -moz-animation: med-fade ease-in-out 6259ms infinite, wiggle3 ease-in-out 12019ms infinite;
+  -ms-animation: med-fade ease-in-out 6259ms infinite, wiggle3 ease-in-out 12019ms infinite;
+  -o-animation: med-fade ease-in-out 6259ms infinite, wiggle3 ease-in-out 12019ms infinite;
+  animation: med-fade ease-in-out 6259ms infinite, wiggle3 ease-in-out 12019ms infinite;
+}
+.ray:nth-child(62) {
+  left: 55%;
+  height: 104px;
+  width: 17px;
+  background: #ff6600;
+  -webkit-filter: blur(17.09px);
+  -khtml-filter: blur(17.09px);
+  -moz-filter: blur(17.09px);
+  -ms-filter: blur(17.09px);
+  -o-filter: blur(17.09px);
+  filter: blur(17.09px);
+  -webkit-animation: med-fade ease-in-out 6404ms infinite, wiggle2 ease-in-out 7149ms infinite;
+  -khtml-animation: med-fade ease-in-out 6404ms infinite, wiggle2 ease-in-out 7149ms infinite;
+  -moz-animation: med-fade ease-in-out 6404ms infinite, wiggle2 ease-in-out 7149ms infinite;
+  -ms-animation: med-fade ease-in-out 6404ms infinite, wiggle2 ease-in-out 7149ms infinite;
+  -o-animation: med-fade ease-in-out 6404ms infinite, wiggle2 ease-in-out 7149ms infinite;
+  animation: med-fade ease-in-out 6404ms infinite, wiggle2 ease-in-out 7149ms infinite;
+}
+.ray:nth-child(63) {
+  left: 70%;
+  height: 383px;
+  width: 17px;
+  background: #ff9900;
+  -webkit-filter: blur(25.09px);
+  -khtml-filter: blur(25.09px);
+  -moz-filter: blur(25.09px);
+  -ms-filter: blur(25.09px);
+  -o-filter: blur(25.09px);
+  filter: blur(25.09px);
+  -webkit-animation: med-fade ease-in-out 6167ms infinite, wiggle1 ease-in-out 9715ms infinite;
+  -khtml-animation: med-fade ease-in-out 6167ms infinite, wiggle1 ease-in-out 9715ms infinite;
+  -moz-animation: med-fade ease-in-out 6167ms infinite, wiggle1 ease-in-out 9715ms infinite;
+  -ms-animation: med-fade ease-in-out 6167ms infinite, wiggle1 ease-in-out 9715ms infinite;
+  -o-animation: med-fade ease-in-out 6167ms infinite, wiggle1 ease-in-out 9715ms infinite;
+  animation: med-fade ease-in-out 6167ms infinite, wiggle1 ease-in-out 9715ms infinite;
+}
+.ray:nth-child(64) {
+  left: 30%;
+  height: 128px;
+  width: 27px;
+  background: #ffcc00;
+  -webkit-filter: blur(41.79px);
+  -khtml-filter: blur(41.79px);
+  -moz-filter: blur(41.79px);
+  -ms-filter: blur(41.79px);
+  -o-filter: blur(41.79px);
+  filter: blur(41.79px);
+  -webkit-animation: med-fade ease-in-out 6513ms infinite, wiggle3 ease-in-out 8117ms infinite;
+  -khtml-animation: med-fade ease-in-out 6513ms infinite, wiggle3 ease-in-out 8117ms infinite;
+  -moz-animation: med-fade ease-in-out 6513ms infinite, wiggle3 ease-in-out 8117ms infinite;
+  -ms-animation: med-fade ease-in-out 6513ms infinite, wiggle3 ease-in-out 8117ms infinite;
+  -o-animation: med-fade ease-in-out 6513ms infinite, wiggle3 ease-in-out 8117ms infinite;
+  animation: med-fade ease-in-out 6513ms infinite, wiggle3 ease-in-out 8117ms infinite;
+}
+.ray:nth-child(65) {
+  left: 74%;
+  height: 272px;
+  width: 18px;
+  background: yellow;
+  -webkit-filter: blur(24.86px);
+  -khtml-filter: blur(24.86px);
+  -moz-filter: blur(24.86px);
+  -ms-filter: blur(24.86px);
+  -o-filter: blur(24.86px);
+  filter: blur(24.86px);
+  -webkit-animation: med-fade ease-in-out 6158ms infinite, wiggle2 ease-in-out 7847ms infinite;
+  -khtml-animation: med-fade ease-in-out 6158ms infinite, wiggle2 ease-in-out 7847ms infinite;
+  -moz-animation: med-fade ease-in-out 6158ms infinite, wiggle2 ease-in-out 7847ms infinite;
+  -ms-animation: med-fade ease-in-out 6158ms infinite, wiggle2 ease-in-out 7847ms infinite;
+  -o-animation: med-fade ease-in-out 6158ms infinite, wiggle2 ease-in-out 7847ms infinite;
+  animation: med-fade ease-in-out 6158ms infinite, wiggle2 ease-in-out 7847ms infinite;
+}
+.ray:nth-child(66) {
+  left: 32%;
+  height: 305px;
+  width: 27px;
+  background: #ccff00;
+  -webkit-filter: blur(44.79px);
+  -khtml-filter: blur(44.79px);
+  -moz-filter: blur(44.79px);
+  -ms-filter: blur(44.79px);
+  -o-filter: blur(44.79px);
+  filter: blur(44.79px);
+  -webkit-animation: med-fade ease-in-out 6248ms infinite, wiggle2 ease-in-out 15035ms infinite;
+  -khtml-animation: med-fade ease-in-out 6248ms infinite, wiggle2 ease-in-out 15035ms infinite;
+  -moz-animation: med-fade ease-in-out 6248ms infinite, wiggle2 ease-in-out 15035ms infinite;
+  -ms-animation: med-fade ease-in-out 6248ms infinite, wiggle2 ease-in-out 15035ms infinite;
+  -o-animation: med-fade ease-in-out 6248ms infinite, wiggle2 ease-in-out 15035ms infinite;
+  animation: med-fade ease-in-out 6248ms infinite, wiggle2 ease-in-out 15035ms infinite;
+}
+.ray:nth-child(67) {
+  left: 38%;
+  height: 191px;
+  width: 27px;
+  background: #99ff00;
+  -webkit-filter: blur(23.79px);
+  -khtml-filter: blur(23.79px);
+  -moz-filter: blur(23.79px);
+  -ms-filter: blur(23.79px);
+  -o-filter: blur(23.79px);
+  filter: blur(23.79px);
+  -webkit-animation: med-fade ease-in-out 6528ms infinite, wiggle1 ease-in-out 13327ms infinite;
+  -khtml-animation: med-fade ease-in-out 6528ms infinite, wiggle1 ease-in-out 13327ms infinite;
+  -moz-animation: med-fade ease-in-out 6528ms infinite, wiggle1 ease-in-out 13327ms infinite;
+  -ms-animation: med-fade ease-in-out 6528ms infinite, wiggle1 ease-in-out 13327ms infinite;
+  -o-animation: med-fade ease-in-out 6528ms infinite, wiggle1 ease-in-out 13327ms infinite;
+  animation: med-fade ease-in-out 6528ms infinite, wiggle1 ease-in-out 13327ms infinite;
+}
+.ray:nth-child(68) {
+  left: 95%;
+  height: 264px;
+  width: 28px;
+  background: #66ff00;
+  -webkit-filter: blur(46.56px);
+  -khtml-filter: blur(46.56px);
+  -moz-filter: blur(46.56px);
+  -ms-filter: blur(46.56px);
+  -o-filter: blur(46.56px);
+  filter: blur(46.56px);
+  -webkit-animation: med-fade ease-in-out 6615ms infinite, wiggle2 ease-in-out 12796ms infinite;
+  -khtml-animation: med-fade ease-in-out 6615ms infinite, wiggle2 ease-in-out 12796ms infinite;
+  -moz-animation: med-fade ease-in-out 6615ms infinite, wiggle2 ease-in-out 12796ms infinite;
+  -ms-animation: med-fade ease-in-out 6615ms infinite, wiggle2 ease-in-out 12796ms infinite;
+  -o-animation: med-fade ease-in-out 6615ms infinite, wiggle2 ease-in-out 12796ms infinite;
+  animation: med-fade ease-in-out 6615ms infinite, wiggle2 ease-in-out 12796ms infinite;
+}
+.ray:nth-child(69) {
+  left: 50%;
+  height: 208px;
+  width: 21px;
+  background: #33ff00;
+  -webkit-filter: blur(24.17px);
+  -khtml-filter: blur(24.17px);
+  -moz-filter: blur(24.17px);
+  -ms-filter: blur(24.17px);
+  -o-filter: blur(24.17px);
+  filter: blur(24.17px);
+  -webkit-animation: med-fade ease-in-out 6600ms infinite, wiggle2 ease-in-out 13167ms infinite;
+  -khtml-animation: med-fade ease-in-out 6600ms infinite, wiggle2 ease-in-out 13167ms infinite;
+  -moz-animation: med-fade ease-in-out 6600ms infinite, wiggle2 ease-in-out 13167ms infinite;
+  -ms-animation: med-fade ease-in-out 6600ms infinite, wiggle2 ease-in-out 13167ms infinite;
+  -o-animation: med-fade ease-in-out 6600ms infinite, wiggle2 ease-in-out 13167ms infinite;
+  animation: med-fade ease-in-out 6600ms infinite, wiggle2 ease-in-out 13167ms infinite;
+}
+.ray:nth-child(70) {
+  left: 30%;
+  height: 128px;
+  width: 16px;
+  background: lime;
+  -webkit-filter: blur(24.32px);
+  -khtml-filter: blur(24.32px);
+  -moz-filter: blur(24.32px);
+  -ms-filter: blur(24.32px);
+  -o-filter: blur(24.32px);
+  filter: blur(24.32px);
+  -webkit-animation: med-fade ease-in-out 6788ms infinite, wiggle3 ease-in-out 8611ms infinite;
+  -khtml-animation: med-fade ease-in-out 6788ms infinite, wiggle3 ease-in-out 8611ms infinite;
+  -moz-animation: med-fade ease-in-out 6788ms infinite, wiggle3 ease-in-out 8611ms infinite;
+  -ms-animation: med-fade ease-in-out 6788ms infinite, wiggle3 ease-in-out 8611ms infinite;
+  -o-animation: med-fade ease-in-out 6788ms infinite, wiggle3 ease-in-out 8611ms infinite;
+  animation: med-fade ease-in-out 6788ms infinite, wiggle3 ease-in-out 8611ms infinite;
+}
+.ray:nth-child(71) {
+  left: 69%;
+  height: 338px;
+  width: 22px;
+  background: #00ff33;
+  -webkit-filter: blur(29.94px);
+  -khtml-filter: blur(29.94px);
+  -moz-filter: blur(29.94px);
+  -ms-filter: blur(29.94px);
+  -o-filter: blur(29.94px);
+  filter: blur(29.94px);
+  -webkit-animation: med-fade ease-in-out 6286ms infinite, wiggle3 ease-in-out 6594ms infinite;
+  -khtml-animation: med-fade ease-in-out 6286ms infinite, wiggle3 ease-in-out 6594ms infinite;
+  -moz-animation: med-fade ease-in-out 6286ms infinite, wiggle3 ease-in-out 6594ms infinite;
+  -ms-animation: med-fade ease-in-out 6286ms infinite, wiggle3 ease-in-out 6594ms infinite;
+  -o-animation: med-fade ease-in-out 6286ms infinite, wiggle3 ease-in-out 6594ms infinite;
+  animation: med-fade ease-in-out 6286ms infinite, wiggle3 ease-in-out 6594ms infinite;
+}
+.ray:nth-child(72) {
+  left: 97%;
+  height: 292px;
+  width: 21px;
+  background: #00ff66;
+  -webkit-filter: blur(17.17px);
+  -khtml-filter: blur(17.17px);
+  -moz-filter: blur(17.17px);
+  -ms-filter: blur(17.17px);
+  -o-filter: blur(17.17px);
+  filter: blur(17.17px);
+  -webkit-animation: med-fade ease-in-out 6141ms infinite, wiggle3 ease-in-out 11236ms infinite;
+  -khtml-animation: med-fade ease-in-out 6141ms infinite, wiggle3 ease-in-out 11236ms infinite;
+  -moz-animation: med-fade ease-in-out 6141ms infinite, wiggle3 ease-in-out 11236ms infinite;
+  -ms-animation: med-fade ease-in-out 6141ms infinite, wiggle3 ease-in-out 11236ms infinite;
+  -o-animation: med-fade ease-in-out 6141ms infinite, wiggle3 ease-in-out 11236ms infinite;
+  animation: med-fade ease-in-out 6141ms infinite, wiggle3 ease-in-out 11236ms infinite;
+}
+.ray:nth-child(73) {
+  left: 46%;
+  height: 366px;
+  width: 21px;
+  background: #00ff99;
+  -webkit-filter: blur(18.17px);
+  -khtml-filter: blur(18.17px);
+  -moz-filter: blur(18.17px);
+  -ms-filter: blur(18.17px);
+  -o-filter: blur(18.17px);
+  filter: blur(18.17px);
+  -webkit-animation: med-fade ease-in-out 6144ms infinite, wiggle2 ease-in-out 13127ms infinite;
+  -khtml-animation: med-fade ease-in-out 6144ms infinite, wiggle2 ease-in-out 13127ms infinite;
+  -moz-animation: med-fade ease-in-out 6144ms infinite, wiggle2 ease-in-out 13127ms infinite;
+  -ms-animation: med-fade ease-in-out 6144ms infinite, wiggle2 ease-in-out 13127ms infinite;
+  -o-animation: med-fade ease-in-out 6144ms infinite, wiggle2 ease-in-out 13127ms infinite;
+  animation: med-fade ease-in-out 6144ms infinite, wiggle2 ease-in-out 13127ms infinite;
+}
+.ray:nth-child(74) {
+  left: 34%;
+  height: 108px;
+  width: 27px;
+  background: #00ffcc;
+  -webkit-filter: blur(40.79px);
+  -khtml-filter: blur(40.79px);
+  -moz-filter: blur(40.79px);
+  -ms-filter: blur(40.79px);
+  -o-filter: blur(40.79px);
+  filter: blur(40.79px);
+  -webkit-animation: med-fade ease-in-out 6056ms infinite, wiggle3 ease-in-out 8938ms infinite;
+  -khtml-animation: med-fade ease-in-out 6056ms infinite, wiggle3 ease-in-out 8938ms infinite;
+  -moz-animation: med-fade ease-in-out 6056ms infinite, wiggle3 ease-in-out 8938ms infinite;
+  -ms-animation: med-fade ease-in-out 6056ms infinite, wiggle3 ease-in-out 8938ms infinite;
+  -o-animation: med-fade ease-in-out 6056ms infinite, wiggle3 ease-in-out 8938ms infinite;
+  animation: med-fade ease-in-out 6056ms infinite, wiggle3 ease-in-out 8938ms infinite;
+}
+.ray:nth-child(75) {
+  left: 45%;
+  height: 348px;
+  width: 17px;
+  background: cyan;
+  -webkit-filter: blur(18.09px);
+  -khtml-filter: blur(18.09px);
+  -moz-filter: blur(18.09px);
+  -ms-filter: blur(18.09px);
+  -o-filter: blur(18.09px);
+  filter: blur(18.09px);
+  -webkit-animation: med-fade ease-in-out 6521ms infinite, wiggle2 ease-in-out 15041ms infinite;
+  -khtml-animation: med-fade ease-in-out 6521ms infinite, wiggle2 ease-in-out 15041ms infinite;
+  -moz-animation: med-fade ease-in-out 6521ms infinite, wiggle2 ease-in-out 15041ms infinite;
+  -ms-animation: med-fade ease-in-out 6521ms infinite, wiggle2 ease-in-out 15041ms infinite;
+  -o-animation: med-fade ease-in-out 6521ms infinite, wiggle2 ease-in-out 15041ms infinite;
+  animation: med-fade ease-in-out 6521ms infinite, wiggle2 ease-in-out 15041ms infinite;
+}
+.ray:nth-child(76) {
+  left: 29%;
+  height: 215px;
+  width: 23px;
+  background: #00ccff;
+  -webkit-filter: blur(31.71px);
+  -khtml-filter: blur(31.71px);
+  -moz-filter: blur(31.71px);
+  -ms-filter: blur(31.71px);
+  -o-filter: blur(31.71px);
+  filter: blur(31.71px);
+  -webkit-animation: med-fade ease-in-out 6938ms infinite, wiggle1 ease-in-out 8778ms infinite;
+  -khtml-animation: med-fade ease-in-out 6938ms infinite, wiggle1 ease-in-out 8778ms infinite;
+  -moz-animation: med-fade ease-in-out 6938ms infinite, wiggle1 ease-in-out 8778ms infinite;
+  -ms-animation: med-fade ease-in-out 6938ms infinite, wiggle1 ease-in-out 8778ms infinite;
+  -o-animation: med-fade ease-in-out 6938ms infinite, wiggle1 ease-in-out 8778ms infinite;
+  animation: med-fade ease-in-out 6938ms infinite, wiggle1 ease-in-out 8778ms infinite;
+}
+.ray:nth-child(77) {
+  left: 76%;
+  height: 144px;
+  width: 17px;
+  background: #0099ff;
+  -webkit-filter: blur(22.09px);
+  -khtml-filter: blur(22.09px);
+  -moz-filter: blur(22.09px);
+  -ms-filter: blur(22.09px);
+  -o-filter: blur(22.09px);
+  filter: blur(22.09px);
+  -webkit-animation: med-fade ease-in-out 6396ms infinite, wiggle2 ease-in-out 11873ms infinite;
+  -khtml-animation: med-fade ease-in-out 6396ms infinite, wiggle2 ease-in-out 11873ms infinite;
+  -moz-animation: med-fade ease-in-out 6396ms infinite, wiggle2 ease-in-out 11873ms infinite;
+  -ms-animation: med-fade ease-in-out 6396ms infinite, wiggle2 ease-in-out 11873ms infinite;
+  -o-animation: med-fade ease-in-out 6396ms infinite, wiggle2 ease-in-out 11873ms infinite;
+  animation: med-fade ease-in-out 6396ms infinite, wiggle2 ease-in-out 11873ms infinite;
+}
+.ray:nth-child(78) {
+  left: 75%;
+  height: 381px;
+  width: 28px;
+  background: #0066ff;
+  -webkit-filter: blur(36.56px);
+  -khtml-filter: blur(36.56px);
+  -moz-filter: blur(36.56px);
+  -ms-filter: blur(36.56px);
+  -o-filter: blur(36.56px);
+  filter: blur(36.56px);
+  -webkit-animation: med-fade ease-in-out 6759ms infinite, wiggle2 ease-in-out 13388ms infinite;
+  -khtml-animation: med-fade ease-in-out 6759ms infinite, wiggle2 ease-in-out 13388ms infinite;
+  -moz-animation: med-fade ease-in-out 6759ms infinite, wiggle2 ease-in-out 13388ms infinite;
+  -ms-animation: med-fade ease-in-out 6759ms infinite, wiggle2 ease-in-out 13388ms infinite;
+  -o-animation: med-fade ease-in-out 6759ms infinite, wiggle2 ease-in-out 13388ms infinite;
+  animation: med-fade ease-in-out 6759ms infinite, wiggle2 ease-in-out 13388ms infinite;
+}
+.ray:nth-child(79) {
+  left: 93%;
+  height: 244px;
+  width: 19px;
+  background: #0033ff;
+  -webkit-filter: blur(24.63px);
+  -khtml-filter: blur(24.63px);
+  -moz-filter: blur(24.63px);
+  -ms-filter: blur(24.63px);
+  -o-filter: blur(24.63px);
+  filter: blur(24.63px);
+  -webkit-animation: med-fade ease-in-out 6894ms infinite, wiggle3 ease-in-out 13455ms infinite;
+  -khtml-animation: med-fade ease-in-out 6894ms infinite, wiggle3 ease-in-out 13455ms infinite;
+  -moz-animation: med-fade ease-in-out 6894ms infinite, wiggle3 ease-in-out 13455ms infinite;
+  -ms-animation: med-fade ease-in-out 6894ms infinite, wiggle3 ease-in-out 13455ms infinite;
+  -o-animation: med-fade ease-in-out 6894ms infinite, wiggle3 ease-in-out 13455ms infinite;
+  animation: med-fade ease-in-out 6894ms infinite, wiggle3 ease-in-out 13455ms infinite;
+}
+.ray:nth-child(80) {
+  left: 46%;
+  height: 226px;
+  width: 29px;
+  background: blue;
+  -webkit-filter: blur(35.33px);
+  -khtml-filter: blur(35.33px);
+  -moz-filter: blur(35.33px);
+  -ms-filter: blur(35.33px);
+  -o-filter: blur(35.33px);
+  filter: blur(35.33px);
+  -webkit-animation: med-fade ease-in-out 6356ms infinite, wiggle2 ease-in-out 11049ms infinite;
+  -khtml-animation: med-fade ease-in-out 6356ms infinite, wiggle2 ease-in-out 11049ms infinite;
+  -moz-animation: med-fade ease-in-out 6356ms infinite, wiggle2 ease-in-out 11049ms infinite;
+  -ms-animation: med-fade ease-in-out 6356ms infinite, wiggle2 ease-in-out 11049ms infinite;
+  -o-animation: med-fade ease-in-out 6356ms infinite, wiggle2 ease-in-out 11049ms infinite;
+  animation: med-fade ease-in-out 6356ms infinite, wiggle2 ease-in-out 11049ms infinite;
+}
+.ray:nth-child(81) {
+  left: 88%;
+  height: 296px;
+  width: 42px;
+  background: #ff4d00;
+  -webkit-filter: blur(64.1px);
+  -khtml-filter: blur(64.1px);
+  -moz-filter: blur(64.1px);
+  -ms-filter: blur(64.1px);
+  -o-filter: blur(64.1px);
+  filter: blur(64.1px);
+  -webkit-animation: big-fade ease-in-out 6564ms infinite, wiggle3 ease-in-out 14399ms infinite;
+  -khtml-animation: big-fade ease-in-out 6564ms infinite, wiggle3 ease-in-out 14399ms infinite;
+  -moz-animation: big-fade ease-in-out 6564ms infinite, wiggle3 ease-in-out 14399ms infinite;
+  -ms-animation: big-fade ease-in-out 6564ms infinite, wiggle3 ease-in-out 14399ms infinite;
+  -o-animation: big-fade ease-in-out 6564ms infinite, wiggle3 ease-in-out 14399ms infinite;
+  animation: big-fade ease-in-out 6564ms infinite, wiggle3 ease-in-out 14399ms infinite;
+}
+.ray:nth-child(82) {
+  left: 75%;
+  height: 374px;
+  width: 76px;
+  background: #ff9900;
+  -webkit-filter: blur(87.8px);
+  -khtml-filter: blur(87.8px);
+  -moz-filter: blur(87.8px);
+  -ms-filter: blur(87.8px);
+  -o-filter: blur(87.8px);
+  filter: blur(87.8px);
+  -webkit-animation: big-fade ease-in-out 6643ms infinite, wiggle2 ease-in-out 13427ms infinite;
+  -khtml-animation: big-fade ease-in-out 6643ms infinite, wiggle2 ease-in-out 13427ms infinite;
+  -moz-animation: big-fade ease-in-out 6643ms infinite, wiggle2 ease-in-out 13427ms infinite;
+  -ms-animation: big-fade ease-in-out 6643ms infinite, wiggle2 ease-in-out 13427ms infinite;
+  -o-animation: big-fade ease-in-out 6643ms infinite, wiggle2 ease-in-out 13427ms infinite;
+  animation: big-fade ease-in-out 6643ms infinite, wiggle2 ease-in-out 13427ms infinite;
+}
+.ray:nth-child(83) {
+  left: 79%;
+  height: 368px;
+  width: 78px;
+  background: #ffe600;
+  -webkit-filter: blur(111.9px);
+  -khtml-filter: blur(111.9px);
+  -moz-filter: blur(111.9px);
+  -ms-filter: blur(111.9px);
+  -o-filter: blur(111.9px);
+  filter: blur(111.9px);
+  -webkit-animation: big-fade ease-in-out 6097ms infinite, wiggle1 ease-in-out 11370ms infinite;
+  -khtml-animation: big-fade ease-in-out 6097ms infinite, wiggle1 ease-in-out 11370ms infinite;
+  -moz-animation: big-fade ease-in-out 6097ms infinite, wiggle1 ease-in-out 11370ms infinite;
+  -ms-animation: big-fade ease-in-out 6097ms infinite, wiggle1 ease-in-out 11370ms infinite;
+  -o-animation: big-fade ease-in-out 6097ms infinite, wiggle1 ease-in-out 11370ms infinite;
+  animation: big-fade ease-in-out 6097ms infinite, wiggle1 ease-in-out 11370ms infinite;
+}
+.ray:nth-child(84) {
+  left: 44%;
+  height: 225px;
+  width: 60px;
+  background: #ccff00;
+  -webkit-filter: blur(66px);
+  -khtml-filter: blur(66px);
+  -moz-filter: blur(66px);
+  -ms-filter: blur(66px);
+  -o-filter: blur(66px);
+  filter: blur(66px);
+  -webkit-animation: big-fade ease-in-out 6959ms infinite, wiggle3 ease-in-out 15578ms infinite;
+  -khtml-animation: big-fade ease-in-out 6959ms infinite, wiggle3 ease-in-out 15578ms infinite;
+  -moz-animation: big-fade ease-in-out 6959ms infinite, wiggle3 ease-in-out 15578ms infinite;
+  -ms-animation: big-fade ease-in-out 6959ms infinite, wiggle3 ease-in-out 15578ms infinite;
+  -o-animation: big-fade ease-in-out 6959ms infinite, wiggle3 ease-in-out 15578ms infinite;
+  animation: big-fade ease-in-out 6959ms infinite, wiggle3 ease-in-out 15578ms infinite;
+}
+.ray:nth-child(85) {
+  left: 21%;
+  height: 449px;
+  width: 45px;
+  background: #80ff00;
+  -webkit-filter: blur(53.75px);
+  -khtml-filter: blur(53.75px);
+  -moz-filter: blur(53.75px);
+  -ms-filter: blur(53.75px);
+  -o-filter: blur(53.75px);
+  filter: blur(53.75px);
+  -webkit-animation: big-fade ease-in-out 6705ms infinite, wiggle3 ease-in-out 14214ms infinite;
+  -khtml-animation: big-fade ease-in-out 6705ms infinite, wiggle3 ease-in-out 14214ms infinite;
+  -moz-animation: big-fade ease-in-out 6705ms infinite, wiggle3 ease-in-out 14214ms infinite;
+  -ms-animation: big-fade ease-in-out 6705ms infinite, wiggle3 ease-in-out 14214ms infinite;
+  -o-animation: big-fade ease-in-out 6705ms infinite, wiggle3 ease-in-out 14214ms infinite;
+  animation: big-fade ease-in-out 6705ms infinite, wiggle3 ease-in-out 14214ms infinite;
+}
+.ray:nth-child(86) {
+  left: 28%;
+  height: 148px;
+  width: 57px;
+  background: #33ff00;
+  -webkit-filter: blur(43.35px);
+  -khtml-filter: blur(43.35px);
+  -moz-filter: blur(43.35px);
+  -ms-filter: blur(43.35px);
+  -o-filter: blur(43.35px);
+  filter: blur(43.35px);
+  -webkit-animation: big-fade ease-in-out 6858ms infinite, wiggle3 ease-in-out 7395ms infinite;
+  -khtml-animation: big-fade ease-in-out 6858ms infinite, wiggle3 ease-in-out 7395ms infinite;
+  -moz-animation: big-fade ease-in-out 6858ms infinite, wiggle3 ease-in-out 7395ms infinite;
+  -ms-animation: big-fade ease-in-out 6858ms infinite, wiggle3 ease-in-out 7395ms infinite;
+  -o-animation: big-fade ease-in-out 6858ms infinite, wiggle3 ease-in-out 7395ms infinite;
+  animation: big-fade ease-in-out 6858ms infinite, wiggle3 ease-in-out 7395ms infinite;
+}
+.ray:nth-child(87) {
+  left: 34%;
+  height: 247px;
+  width: 58px;
+  background: #00ff1a;
+  -webkit-filter: blur(61.9px);
+  -khtml-filter: blur(61.9px);
+  -moz-filter: blur(61.9px);
+  -ms-filter: blur(61.9px);
+  -o-filter: blur(61.9px);
+  filter: blur(61.9px);
+  -webkit-animation: big-fade ease-in-out 6995ms infinite, wiggle1 ease-in-out 13197ms infinite;
+  -khtml-animation: big-fade ease-in-out 6995ms infinite, wiggle1 ease-in-out 13197ms infinite;
+  -moz-animation: big-fade ease-in-out 6995ms infinite, wiggle1 ease-in-out 13197ms infinite;
+  -ms-animation: big-fade ease-in-out 6995ms infinite, wiggle1 ease-in-out 13197ms infinite;
+  -o-animation: big-fade ease-in-out 6995ms infinite, wiggle1 ease-in-out 13197ms infinite;
+  animation: big-fade ease-in-out 6995ms infinite, wiggle1 ease-in-out 13197ms infinite;
+}
+.ray:nth-child(88) {
+  left: 39%;
+  height: 210px;
+  width: 79px;
+  background: #00ff66;
+  -webkit-filter: blur(80.45px);
+  -khtml-filter: blur(80.45px);
+  -moz-filter: blur(80.45px);
+  -ms-filter: blur(80.45px);
+  -o-filter: blur(80.45px);
+  filter: blur(80.45px);
+  -webkit-animation: big-fade ease-in-out 6397ms infinite, wiggle2 ease-in-out 13584ms infinite;
+  -khtml-animation: big-fade ease-in-out 6397ms infinite, wiggle2 ease-in-out 13584ms infinite;
+  -moz-animation: big-fade ease-in-out 6397ms infinite, wiggle2 ease-in-out 13584ms infinite;
+  -ms-animation: big-fade ease-in-out 6397ms infinite, wiggle2 ease-in-out 13584ms infinite;
+  -o-animation: big-fade ease-in-out 6397ms infinite, wiggle2 ease-in-out 13584ms infinite;
+  animation: big-fade ease-in-out 6397ms infinite, wiggle2 ease-in-out 13584ms infinite;
+}
+.ray:nth-child(89) {
+  left: 100%;
+  height: 153px;
+  width: 70px;
+  background: #00ffb3;
+  -webkit-filter: blur(81.5px);
+  -khtml-filter: blur(81.5px);
+  -moz-filter: blur(81.5px);
+  -ms-filter: blur(81.5px);
+  -o-filter: blur(81.5px);
+  filter: blur(81.5px);
+  -webkit-animation: big-fade ease-in-out 6563ms infinite, wiggle1 ease-in-out 10906ms infinite;
+  -khtml-animation: big-fade ease-in-out 6563ms infinite, wiggle1 ease-in-out 10906ms infinite;
+  -moz-animation: big-fade ease-in-out 6563ms infinite, wiggle1 ease-in-out 10906ms infinite;
+  -ms-animation: big-fade ease-in-out 6563ms infinite, wiggle1 ease-in-out 10906ms infinite;
+  -o-animation: big-fade ease-in-out 6563ms infinite, wiggle1 ease-in-out 10906ms infinite;
+  animation: big-fade ease-in-out 6563ms infinite, wiggle1 ease-in-out 10906ms infinite;
+}
+.ray:nth-child(90) {
+  left: 38%;
+  height: 213px;
+  width: 56px;
+  background: cyan;
+  -webkit-filter: blur(31.8px);
+  -khtml-filter: blur(31.8px);
+  -moz-filter: blur(31.8px);
+  -ms-filter: blur(31.8px);
+  -o-filter: blur(31.8px);
+  filter: blur(31.8px);
+  -webkit-animation: big-fade ease-in-out 6622ms infinite, wiggle2 ease-in-out 8442ms infinite;
+  -khtml-animation: big-fade ease-in-out 6622ms infinite, wiggle2 ease-in-out 8442ms infinite;
+  -moz-animation: big-fade ease-in-out 6622ms infinite, wiggle2 ease-in-out 8442ms infinite;
+  -ms-animation: big-fade ease-in-out 6622ms infinite, wiggle2 ease-in-out 8442ms infinite;
+  -o-animation: big-fade ease-in-out 6622ms infinite, wiggle2 ease-in-out 8442ms infinite;
+  animation: big-fade ease-in-out 6622ms infinite, wiggle2 ease-in-out 8442ms infinite;
+}
+.ray:nth-child(91) {
+  left: 82%;
+  height: 163px;
+  width: 52px;
+  background: #00b3ff;
+  -webkit-filter: blur(55.6px);
+  -khtml-filter: blur(55.6px);
+  -moz-filter: blur(55.6px);
+  -ms-filter: blur(55.6px);
+  -o-filter: blur(55.6px);
+  filter: blur(55.6px);
+  -webkit-animation: big-fade ease-in-out 6417ms infinite, wiggle2 ease-in-out 6483ms infinite;
+  -khtml-animation: big-fade ease-in-out 6417ms infinite, wiggle2 ease-in-out 6483ms infinite;
+  -moz-animation: big-fade ease-in-out 6417ms infinite, wiggle2 ease-in-out 6483ms infinite;
+  -ms-animation: big-fade ease-in-out 6417ms infinite, wiggle2 ease-in-out 6483ms infinite;
+  -o-animation: big-fade ease-in-out 6417ms infinite, wiggle2 ease-in-out 6483ms infinite;
+  animation: big-fade ease-in-out 6417ms infinite, wiggle2 ease-in-out 6483ms infinite;
+}
+.ray:nth-child(92) {
+  left: 81%;
+  height: 344px;
+  width: 47px;
+  background: #0066ff;
+  -webkit-filter: blur(60.85px);
+  -khtml-filter: blur(60.85px);
+  -moz-filter: blur(60.85px);
+  -ms-filter: blur(60.85px);
+  -o-filter: blur(60.85px);
+  filter: blur(60.85px);
+  -webkit-animation: big-fade ease-in-out 6537ms infinite, wiggle3 ease-in-out 10008ms infinite;
+  -khtml-animation: big-fade ease-in-out 6537ms infinite, wiggle3 ease-in-out 10008ms infinite;
+  -moz-animation: big-fade ease-in-out 6537ms infinite, wiggle3 ease-in-out 10008ms infinite;
+  -ms-animation: big-fade ease-in-out 6537ms infinite, wiggle3 ease-in-out 10008ms infinite;
+  -o-animation: big-fade ease-in-out 6537ms infinite, wiggle3 ease-in-out 10008ms infinite;
+  animation: big-fade ease-in-out 6537ms infinite, wiggle3 ease-in-out 10008ms infinite;
+}
+.ray:nth-child(93) {
+  left: 52%;
+  height: 209px;
+  width: 46px;
+  background: #001aff;
+  -webkit-filter: blur(53.3px);
+  -khtml-filter: blur(53.3px);
+  -moz-filter: blur(53.3px);
+  -ms-filter: blur(53.3px);
+  -o-filter: blur(53.3px);
+  filter: blur(53.3px);
+  -webkit-animation: big-fade ease-in-out 6759ms infinite, wiggle3 ease-in-out 14755ms infinite;
+  -khtml-animation: big-fade ease-in-out 6759ms infinite, wiggle3 ease-in-out 14755ms infinite;
+  -moz-animation: big-fade ease-in-out 6759ms infinite, wiggle3 ease-in-out 14755ms infinite;
+  -ms-animation: big-fade ease-in-out 6759ms infinite, wiggle3 ease-in-out 14755ms infinite;
+  -o-animation: big-fade ease-in-out 6759ms infinite, wiggle3 ease-in-out 14755ms infinite;
+  animation: big-fade ease-in-out 6759ms infinite, wiggle3 ease-in-out 14755ms infinite;
+}
+.ray:nth-child(94) {
+  left: 18%;
+  height: 307px;
+  width: 60px;
+  background: #3300ff;
+  -webkit-filter: blur(67px);
+  -khtml-filter: blur(67px);
+  -moz-filter: blur(67px);
+  -ms-filter: blur(67px);
+  -o-filter: blur(67px);
+  filter: blur(67px);
+  -webkit-animation: big-fade ease-in-out 6636ms infinite, wiggle1 ease-in-out 12631ms infinite;
+  -khtml-animation: big-fade ease-in-out 6636ms infinite, wiggle1 ease-in-out 12631ms infinite;
+  -moz-animation: big-fade ease-in-out 6636ms infinite, wiggle1 ease-in-out 12631ms infinite;
+  -ms-animation: big-fade ease-in-out 6636ms infinite, wiggle1 ease-in-out 12631ms infinite;
+  -o-animation: big-fade ease-in-out 6636ms infinite, wiggle1 ease-in-out 12631ms infinite;
+  animation: big-fade ease-in-out 6636ms infinite, wiggle1 ease-in-out 12631ms infinite;
+}
+.ray:nth-child(95) {
+  left: 41%;
+  height: 336px;
+  width: 64px;
+  background: #8000ff;
+  -webkit-filter: blur(86.2px);
+  -khtml-filter: blur(86.2px);
+  -moz-filter: blur(86.2px);
+  -ms-filter: blur(86.2px);
+  -o-filter: blur(86.2px);
+  filter: blur(86.2px);
+  -webkit-animation: big-fade ease-in-out 6298ms infinite, wiggle3 ease-in-out 10945ms infinite;
+  -khtml-animation: big-fade ease-in-out 6298ms infinite, wiggle3 ease-in-out 10945ms infinite;
+  -moz-animation: big-fade ease-in-out 6298ms infinite, wiggle3 ease-in-out 10945ms infinite;
+  -ms-animation: big-fade ease-in-out 6298ms infinite, wiggle3 ease-in-out 10945ms infinite;
+  -o-animation: big-fade ease-in-out 6298ms infinite, wiggle3 ease-in-out 10945ms infinite;
+  animation: big-fade ease-in-out 6298ms infinite, wiggle3 ease-in-out 10945ms infinite;
+}
+.ray:nth-child(96) {
+  left: 46%;
+  height: 199px;
+  width: 77px;
+  background: #cc00ff;
+  -webkit-filter: blur(61.35px);
+  -khtml-filter: blur(61.35px);
+  -moz-filter: blur(61.35px);
+  -ms-filter: blur(61.35px);
+  -o-filter: blur(61.35px);
+  filter: blur(61.35px);
+  -webkit-animation: big-fade ease-in-out 6424ms infinite, wiggle3 ease-in-out 10305ms infinite;
+  -khtml-animation: big-fade ease-in-out 6424ms infinite, wiggle3 ease-in-out 10305ms infinite;
+  -moz-animation: big-fade ease-in-out 6424ms infinite, wiggle3 ease-in-out 10305ms infinite;
+  -ms-animation: big-fade ease-in-out 6424ms infinite, wiggle3 ease-in-out 10305ms infinite;
+  -o-animation: big-fade ease-in-out 6424ms infinite, wiggle3 ease-in-out 10305ms infinite;
+  animation: big-fade ease-in-out 6424ms infinite, wiggle3 ease-in-out 10305ms infinite;
+}
+.ray:nth-child(97) {
+  left: 90%;
+  height: 242px;
+  width: 70px;
+  background: #ff00e6;
+  -webkit-filter: blur(63.5px);
+  -khtml-filter: blur(63.5px);
+  -moz-filter: blur(63.5px);
+  -ms-filter: blur(63.5px);
+  -o-filter: blur(63.5px);
+  filter: blur(63.5px);
+  -webkit-animation: big-fade ease-in-out 6555ms infinite, wiggle3 ease-in-out 14521ms infinite;
+  -khtml-animation: big-fade ease-in-out 6555ms infinite, wiggle3 ease-in-out 14521ms infinite;
+  -moz-animation: big-fade ease-in-out 6555ms infinite, wiggle3 ease-in-out 14521ms infinite;
+  -ms-animation: big-fade ease-in-out 6555ms infinite, wiggle3 ease-in-out 14521ms infinite;
+  -o-animation: big-fade ease-in-out 6555ms infinite, wiggle3 ease-in-out 14521ms infinite;
+  animation: big-fade ease-in-out 6555ms infinite, wiggle3 ease-in-out 14521ms infinite;
+}
+.ray:nth-child(98) {
+  left: 40%;
+  height: 361px;
+  width: 56px;
+  background: #ff0099;
+  -webkit-filter: blur(36.8px);
+  -khtml-filter: blur(36.8px);
+  -moz-filter: blur(36.8px);
+  -ms-filter: blur(36.8px);
+  -o-filter: blur(36.8px);
+  filter: blur(36.8px);
+  -webkit-animation: big-fade ease-in-out 6812ms infinite, wiggle2 ease-in-out 11198ms infinite;
+  -khtml-animation: big-fade ease-in-out 6812ms infinite, wiggle2 ease-in-out 11198ms infinite;
+  -moz-animation: big-fade ease-in-out 6812ms infinite, wiggle2 ease-in-out 11198ms infinite;
+  -ms-animation: big-fade ease-in-out 6812ms infinite, wiggle2 ease-in-out 11198ms infinite;
+  -o-animation: big-fade ease-in-out 6812ms infinite, wiggle2 ease-in-out 11198ms infinite;
+  animation: big-fade ease-in-out 6812ms infinite, wiggle2 ease-in-out 11198ms infinite;
+}
+.ray:nth-child(99) {
+  left: 1%;
+  height: 320px;
+  width: 69px;
+  background: #ff004d;
+  -webkit-filter: blur(39.95px);
+  -khtml-filter: blur(39.95px);
+  -moz-filter: blur(39.95px);
+  -ms-filter: blur(39.95px);
+  -o-filter: blur(39.95px);
+  filter: blur(39.95px);
+  -webkit-animation: big-fade ease-in-out 6062ms infinite, wiggle1 ease-in-out 9789ms infinite;
+  -khtml-animation: big-fade ease-in-out 6062ms infinite, wiggle1 ease-in-out 9789ms infinite;
+  -moz-animation: big-fade ease-in-out 6062ms infinite, wiggle1 ease-in-out 9789ms infinite;
+  -ms-animation: big-fade ease-in-out 6062ms infinite, wiggle1 ease-in-out 9789ms infinite;
+  -o-animation: big-fade ease-in-out 6062ms infinite, wiggle1 ease-in-out 9789ms infinite;
+  animation: big-fade ease-in-out 6062ms infinite, wiggle1 ease-in-out 9789ms infinite;
+}
+.ray:nth-child(100) {
+  left: 85%;
+  height: 268px;
+  width: 79px;
+  background: red;
+  -webkit-filter: blur(57.45px);
+  -khtml-filter: blur(57.45px);
+  -moz-filter: blur(57.45px);
+  -ms-filter: blur(57.45px);
+  -o-filter: blur(57.45px);
+  filter: blur(57.45px);
+  -webkit-animation: big-fade ease-in-out 6827ms infinite, wiggle3 ease-in-out 14977ms infinite;
+  -khtml-animation: big-fade ease-in-out 6827ms infinite, wiggle3 ease-in-out 14977ms infinite;
+  -moz-animation: big-fade ease-in-out 6827ms infinite, wiggle3 ease-in-out 14977ms infinite;
+  -ms-animation: big-fade ease-in-out 6827ms infinite, wiggle3 ease-in-out 14977ms infinite;
+  -o-animation: big-fade ease-in-out 6827ms infinite, wiggle3 ease-in-out 14977ms infinite;
+  animation: big-fade ease-in-out 6827ms infinite, wiggle3 ease-in-out 14977ms infinite;
+}
+
+@-webkit-keyframes sml-fade {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@-khtml-keyframes sml-fade {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@-moz-keyframes sml-fade {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@-ms-keyframes sml-fade {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@-o-keyframes sml-fade {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@keyframes sml-fade {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@-webkit-keyframes med-fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@-khtml-keyframes med-fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@-moz-keyframes med-fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@-ms-keyframes med-fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@-o-keyframes med-fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@keyframes med-fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@-webkit-keyframes big-fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@-khtml-keyframes big-fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@-moz-keyframes big-fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@-ms-keyframes big-fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@-o-keyframes big-fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@keyframes big-fade {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@-webkit-keyframes wiggle0 {
+  0% {
+    -webkit-transform: translate3d(51px, -100px, 0);
+    -khtml-transform: translate3d(51px, -100px, 0);
+    -moz-transform: translate3d(51px, -100px, 0);
+    -ms-transform: translate3d(51px, -100px, 0);
+    -o-transform: translate3d(51px, -100px, 0);
+    transform: translate3d(51px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(82px, 82px, 0);
+    -khtml-transform: translate3d(82px, 82px, 0);
+    -moz-transform: translate3d(82px, 82px, 0);
+    -ms-transform: translate3d(82px, 82px, 0);
+    -o-transform: translate3d(82px, 82px, 0);
+    transform: translate3d(82px, 82px, 0);
+    -webkit-transform: scaleX(1.5);
+  }
+  100% {
+    -webkit-transform: translate3d(51px, -100px, 0);
+    -khtml-transform: translate3d(51px, -100px, 0);
+    -moz-transform: translate3d(51px, -100px, 0);
+    -ms-transform: translate3d(51px, -100px, 0);
+    -o-transform: translate3d(51px, -100px, 0);
+    transform: translate3d(51px, -100px, 0);
+  }
+}
+@-khtml-keyframes wiggle0 {
+  0% {
+    -webkit-transform: translate3d(51px, -100px, 0);
+    -khtml-transform: translate3d(51px, -100px, 0);
+    -moz-transform: translate3d(51px, -100px, 0);
+    -ms-transform: translate3d(51px, -100px, 0);
+    -o-transform: translate3d(51px, -100px, 0);
+    transform: translate3d(51px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(82px, 82px, 0);
+    -khtml-transform: translate3d(82px, 82px, 0);
+    -moz-transform: translate3d(82px, 82px, 0);
+    -ms-transform: translate3d(82px, 82px, 0);
+    -o-transform: translate3d(82px, 82px, 0);
+    transform: translate3d(82px, 82px, 0);
+    -webkit-transform: scaleX(1.5);
+  }
+  100% {
+    -webkit-transform: translate3d(51px, -100px, 0);
+    -khtml-transform: translate3d(51px, -100px, 0);
+    -moz-transform: translate3d(51px, -100px, 0);
+    -ms-transform: translate3d(51px, -100px, 0);
+    -o-transform: translate3d(51px, -100px, 0);
+    transform: translate3d(51px, -100px, 0);
+  }
+}
+@-moz-keyframes wiggle0 {
+  0% {
+    -webkit-transform: translate3d(51px, -100px, 0);
+    -khtml-transform: translate3d(51px, -100px, 0);
+    -moz-transform: translate3d(51px, -100px, 0);
+    -ms-transform: translate3d(51px, -100px, 0);
+    -o-transform: translate3d(51px, -100px, 0);
+    transform: translate3d(51px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(82px, 82px, 0);
+    -khtml-transform: translate3d(82px, 82px, 0);
+    -moz-transform: translate3d(82px, 82px, 0);
+    -ms-transform: translate3d(82px, 82px, 0);
+    -o-transform: translate3d(82px, 82px, 0);
+    transform: translate3d(82px, 82px, 0);
+    -webkit-transform: scaleX(1.5);
+  }
+  100% {
+    -webkit-transform: translate3d(51px, -100px, 0);
+    -khtml-transform: translate3d(51px, -100px, 0);
+    -moz-transform: translate3d(51px, -100px, 0);
+    -ms-transform: translate3d(51px, -100px, 0);
+    -o-transform: translate3d(51px, -100px, 0);
+    transform: translate3d(51px, -100px, 0);
+  }
+}
+@-ms-keyframes wiggle0 {
+  0% {
+    -webkit-transform: translate3d(51px, -100px, 0);
+    -khtml-transform: translate3d(51px, -100px, 0);
+    -moz-transform: translate3d(51px, -100px, 0);
+    -ms-transform: translate3d(51px, -100px, 0);
+    -o-transform: translate3d(51px, -100px, 0);
+    transform: translate3d(51px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(82px, 82px, 0);
+    -khtml-transform: translate3d(82px, 82px, 0);
+    -moz-transform: translate3d(82px, 82px, 0);
+    -ms-transform: translate3d(82px, 82px, 0);
+    -o-transform: translate3d(82px, 82px, 0);
+    transform: translate3d(82px, 82px, 0);
+    -webkit-transform: scaleX(1.5);
+  }
+  100% {
+    -webkit-transform: translate3d(51px, -100px, 0);
+    -khtml-transform: translate3d(51px, -100px, 0);
+    -moz-transform: translate3d(51px, -100px, 0);
+    -ms-transform: translate3d(51px, -100px, 0);
+    -o-transform: translate3d(51px, -100px, 0);
+    transform: translate3d(51px, -100px, 0);
+  }
+}
+@-o-keyframes wiggle0 {
+  0% {
+    -webkit-transform: translate3d(51px, -100px, 0);
+    -khtml-transform: translate3d(51px, -100px, 0);
+    -moz-transform: translate3d(51px, -100px, 0);
+    -ms-transform: translate3d(51px, -100px, 0);
+    -o-transform: translate3d(51px, -100px, 0);
+    transform: translate3d(51px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(82px, 82px, 0);
+    -khtml-transform: translate3d(82px, 82px, 0);
+    -moz-transform: translate3d(82px, 82px, 0);
+    -ms-transform: translate3d(82px, 82px, 0);
+    -o-transform: translate3d(82px, 82px, 0);
+    transform: translate3d(82px, 82px, 0);
+    -webkit-transform: scaleX(1.5);
+  }
+  100% {
+    -webkit-transform: translate3d(51px, -100px, 0);
+    -khtml-transform: translate3d(51px, -100px, 0);
+    -moz-transform: translate3d(51px, -100px, 0);
+    -ms-transform: translate3d(51px, -100px, 0);
+    -o-transform: translate3d(51px, -100px, 0);
+    transform: translate3d(51px, -100px, 0);
+  }
+}
+@keyframes wiggle0 {
+  0% {
+    -webkit-transform: translate3d(51px, -100px, 0);
+    -khtml-transform: translate3d(51px, -100px, 0);
+    -moz-transform: translate3d(51px, -100px, 0);
+    -ms-transform: translate3d(51px, -100px, 0);
+    -o-transform: translate3d(51px, -100px, 0);
+    transform: translate3d(51px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(82px, 82px, 0);
+    -khtml-transform: translate3d(82px, 82px, 0);
+    -moz-transform: translate3d(82px, 82px, 0);
+    -ms-transform: translate3d(82px, 82px, 0);
+    -o-transform: translate3d(82px, 82px, 0);
+    transform: translate3d(82px, 82px, 0);
+    -webkit-transform: scaleX(1.5);
+  }
+  100% {
+    -webkit-transform: translate3d(51px, -100px, 0);
+    -khtml-transform: translate3d(51px, -100px, 0);
+    -moz-transform: translate3d(51px, -100px, 0);
+    -ms-transform: translate3d(51px, -100px, 0);
+    -o-transform: translate3d(51px, -100px, 0);
+    transform: translate3d(51px, -100px, 0);
+  }
+}
+@-webkit-keyframes wiggle1 {
+  0% {
+    -webkit-transform: translate3d(69px, -100px, 0);
+    -khtml-transform: translate3d(69px, -100px, 0);
+    -moz-transform: translate3d(69px, -100px, 0);
+    -ms-transform: translate3d(69px, -100px, 0);
+    -o-transform: translate3d(69px, -100px, 0);
+    transform: translate3d(69px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(180px, 180px, 0);
+    -khtml-transform: translate3d(180px, 180px, 0);
+    -moz-transform: translate3d(180px, 180px, 0);
+    -ms-transform: translate3d(180px, 180px, 0);
+    -o-transform: translate3d(180px, 180px, 0);
+    transform: translate3d(180px, 180px, 0);
+    -webkit-transform: scaleX(2);
+  }
+  100% {
+    -webkit-transform: translate3d(69px, -100px, 0);
+    -khtml-transform: translate3d(69px, -100px, 0);
+    -moz-transform: translate3d(69px, -100px, 0);
+    -ms-transform: translate3d(69px, -100px, 0);
+    -o-transform: translate3d(69px, -100px, 0);
+    transform: translate3d(69px, -100px, 0);
+  }
+}
+@-khtml-keyframes wiggle1 {
+  0% {
+    -webkit-transform: translate3d(69px, -100px, 0);
+    -khtml-transform: translate3d(69px, -100px, 0);
+    -moz-transform: translate3d(69px, -100px, 0);
+    -ms-transform: translate3d(69px, -100px, 0);
+    -o-transform: translate3d(69px, -100px, 0);
+    transform: translate3d(69px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(180px, 180px, 0);
+    -khtml-transform: translate3d(180px, 180px, 0);
+    -moz-transform: translate3d(180px, 180px, 0);
+    -ms-transform: translate3d(180px, 180px, 0);
+    -o-transform: translate3d(180px, 180px, 0);
+    transform: translate3d(180px, 180px, 0);
+    -webkit-transform: scaleX(2);
+  }
+  100% {
+    -webkit-transform: translate3d(69px, -100px, 0);
+    -khtml-transform: translate3d(69px, -100px, 0);
+    -moz-transform: translate3d(69px, -100px, 0);
+    -ms-transform: translate3d(69px, -100px, 0);
+    -o-transform: translate3d(69px, -100px, 0);
+    transform: translate3d(69px, -100px, 0);
+  }
+}
+@-moz-keyframes wiggle1 {
+  0% {
+    -webkit-transform: translate3d(69px, -100px, 0);
+    -khtml-transform: translate3d(69px, -100px, 0);
+    -moz-transform: translate3d(69px, -100px, 0);
+    -ms-transform: translate3d(69px, -100px, 0);
+    -o-transform: translate3d(69px, -100px, 0);
+    transform: translate3d(69px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(180px, 180px, 0);
+    -khtml-transform: translate3d(180px, 180px, 0);
+    -moz-transform: translate3d(180px, 180px, 0);
+    -ms-transform: translate3d(180px, 180px, 0);
+    -o-transform: translate3d(180px, 180px, 0);
+    transform: translate3d(180px, 180px, 0);
+    -webkit-transform: scaleX(2);
+  }
+  100% {
+    -webkit-transform: translate3d(69px, -100px, 0);
+    -khtml-transform: translate3d(69px, -100px, 0);
+    -moz-transform: translate3d(69px, -100px, 0);
+    -ms-transform: translate3d(69px, -100px, 0);
+    -o-transform: translate3d(69px, -100px, 0);
+    transform: translate3d(69px, -100px, 0);
+  }
+}
+@-ms-keyframes wiggle1 {
+  0% {
+    -webkit-transform: translate3d(69px, -100px, 0);
+    -khtml-transform: translate3d(69px, -100px, 0);
+    -moz-transform: translate3d(69px, -100px, 0);
+    -ms-transform: translate3d(69px, -100px, 0);
+    -o-transform: translate3d(69px, -100px, 0);
+    transform: translate3d(69px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(180px, 180px, 0);
+    -khtml-transform: translate3d(180px, 180px, 0);
+    -moz-transform: translate3d(180px, 180px, 0);
+    -ms-transform: translate3d(180px, 180px, 0);
+    -o-transform: translate3d(180px, 180px, 0);
+    transform: translate3d(180px, 180px, 0);
+    -webkit-transform: scaleX(2);
+  }
+  100% {
+    -webkit-transform: translate3d(69px, -100px, 0);
+    -khtml-transform: translate3d(69px, -100px, 0);
+    -moz-transform: translate3d(69px, -100px, 0);
+    -ms-transform: translate3d(69px, -100px, 0);
+    -o-transform: translate3d(69px, -100px, 0);
+    transform: translate3d(69px, -100px, 0);
+  }
+}
+@-o-keyframes wiggle1 {
+  0% {
+    -webkit-transform: translate3d(69px, -100px, 0);
+    -khtml-transform: translate3d(69px, -100px, 0);
+    -moz-transform: translate3d(69px, -100px, 0);
+    -ms-transform: translate3d(69px, -100px, 0);
+    -o-transform: translate3d(69px, -100px, 0);
+    transform: translate3d(69px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(180px, 180px, 0);
+    -khtml-transform: translate3d(180px, 180px, 0);
+    -moz-transform: translate3d(180px, 180px, 0);
+    -ms-transform: translate3d(180px, 180px, 0);
+    -o-transform: translate3d(180px, 180px, 0);
+    transform: translate3d(180px, 180px, 0);
+    -webkit-transform: scaleX(2);
+  }
+  100% {
+    -webkit-transform: translate3d(69px, -100px, 0);
+    -khtml-transform: translate3d(69px, -100px, 0);
+    -moz-transform: translate3d(69px, -100px, 0);
+    -ms-transform: translate3d(69px, -100px, 0);
+    -o-transform: translate3d(69px, -100px, 0);
+    transform: translate3d(69px, -100px, 0);
+  }
+}
+@keyframes wiggle1 {
+  0% {
+    -webkit-transform: translate3d(69px, -100px, 0);
+    -khtml-transform: translate3d(69px, -100px, 0);
+    -moz-transform: translate3d(69px, -100px, 0);
+    -ms-transform: translate3d(69px, -100px, 0);
+    -o-transform: translate3d(69px, -100px, 0);
+    transform: translate3d(69px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(180px, 180px, 0);
+    -khtml-transform: translate3d(180px, 180px, 0);
+    -moz-transform: translate3d(180px, 180px, 0);
+    -ms-transform: translate3d(180px, 180px, 0);
+    -o-transform: translate3d(180px, 180px, 0);
+    transform: translate3d(180px, 180px, 0);
+    -webkit-transform: scaleX(2);
+  }
+  100% {
+    -webkit-transform: translate3d(69px, -100px, 0);
+    -khtml-transform: translate3d(69px, -100px, 0);
+    -moz-transform: translate3d(69px, -100px, 0);
+    -ms-transform: translate3d(69px, -100px, 0);
+    -o-transform: translate3d(69px, -100px, 0);
+    transform: translate3d(69px, -100px, 0);
+  }
+}
+@-webkit-keyframes wiggle2 {
+  0% {
+    -webkit-transform: translate3d(-91px, -100px, 0);
+    -khtml-transform: translate3d(-91px, -100px, 0);
+    -moz-transform: translate3d(-91px, -100px, 0);
+    -ms-transform: translate3d(-91px, -100px, 0);
+    -o-transform: translate3d(-91px, -100px, 0);
+    transform: translate3d(-91px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-42px, -42px, 0);
+    -khtml-transform: translate3d(-42px, -42px, 0);
+    -moz-transform: translate3d(-42px, -42px, 0);
+    -ms-transform: translate3d(-42px, -42px, 0);
+    -o-transform: translate3d(-42px, -42px, 0);
+    transform: translate3d(-42px, -42px, 0);
+    -webkit-transform: scaleX(2.5);
+  }
+  100% {
+    -webkit-transform: translate3d(-91px, -100px, my3, 0);
+    -khtml-transform: translate3d(-91px, -100px, my3, 0);
+    -moz-transform: translate3d(-91px, -100px, my3, 0);
+    -ms-transform: translate3d(-91px, -100px, my3, 0);
+    -o-transform: translate3d(-91px, -100px, my3, 0);
+    transform: translate3d(-91px, -100px, my3, 0);
+  }
+}
+@-khtml-keyframes wiggle2 {
+  0% {
+    -webkit-transform: translate3d(-91px, -100px, 0);
+    -khtml-transform: translate3d(-91px, -100px, 0);
+    -moz-transform: translate3d(-91px, -100px, 0);
+    -ms-transform: translate3d(-91px, -100px, 0);
+    -o-transform: translate3d(-91px, -100px, 0);
+    transform: translate3d(-91px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-42px, -42px, 0);
+    -khtml-transform: translate3d(-42px, -42px, 0);
+    -moz-transform: translate3d(-42px, -42px, 0);
+    -ms-transform: translate3d(-42px, -42px, 0);
+    -o-transform: translate3d(-42px, -42px, 0);
+    transform: translate3d(-42px, -42px, 0);
+    -webkit-transform: scaleX(2.5);
+  }
+  100% {
+    -webkit-transform: translate3d(-91px, -100px, my3, 0);
+    -khtml-transform: translate3d(-91px, -100px, my3, 0);
+    -moz-transform: translate3d(-91px, -100px, my3, 0);
+    -ms-transform: translate3d(-91px, -100px, my3, 0);
+    -o-transform: translate3d(-91px, -100px, my3, 0);
+    transform: translate3d(-91px, -100px, my3, 0);
+  }
+}
+@-moz-keyframes wiggle2 {
+  0% {
+    -webkit-transform: translate3d(-91px, -100px, 0);
+    -khtml-transform: translate3d(-91px, -100px, 0);
+    -moz-transform: translate3d(-91px, -100px, 0);
+    -ms-transform: translate3d(-91px, -100px, 0);
+    -o-transform: translate3d(-91px, -100px, 0);
+    transform: translate3d(-91px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-42px, -42px, 0);
+    -khtml-transform: translate3d(-42px, -42px, 0);
+    -moz-transform: translate3d(-42px, -42px, 0);
+    -ms-transform: translate3d(-42px, -42px, 0);
+    -o-transform: translate3d(-42px, -42px, 0);
+    transform: translate3d(-42px, -42px, 0);
+    -webkit-transform: scaleX(2.5);
+  }
+  100% {
+    -webkit-transform: translate3d(-91px, -100px, my3, 0);
+    -khtml-transform: translate3d(-91px, -100px, my3, 0);
+    -moz-transform: translate3d(-91px, -100px, my3, 0);
+    -ms-transform: translate3d(-91px, -100px, my3, 0);
+    -o-transform: translate3d(-91px, -100px, my3, 0);
+    transform: translate3d(-91px, -100px, my3, 0);
+  }
+}
+@-ms-keyframes wiggle2 {
+  0% {
+    -webkit-transform: translate3d(-91px, -100px, 0);
+    -khtml-transform: translate3d(-91px, -100px, 0);
+    -moz-transform: translate3d(-91px, -100px, 0);
+    -ms-transform: translate3d(-91px, -100px, 0);
+    -o-transform: translate3d(-91px, -100px, 0);
+    transform: translate3d(-91px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-42px, -42px, 0);
+    -khtml-transform: translate3d(-42px, -42px, 0);
+    -moz-transform: translate3d(-42px, -42px, 0);
+    -ms-transform: translate3d(-42px, -42px, 0);
+    -o-transform: translate3d(-42px, -42px, 0);
+    transform: translate3d(-42px, -42px, 0);
+    -webkit-transform: scaleX(2.5);
+  }
+  100% {
+    -webkit-transform: translate3d(-91px, -100px, my3, 0);
+    -khtml-transform: translate3d(-91px, -100px, my3, 0);
+    -moz-transform: translate3d(-91px, -100px, my3, 0);
+    -ms-transform: translate3d(-91px, -100px, my3, 0);
+    -o-transform: translate3d(-91px, -100px, my3, 0);
+    transform: translate3d(-91px, -100px, my3, 0);
+  }
+}
+@-o-keyframes wiggle2 {
+  0% {
+    -webkit-transform: translate3d(-91px, -100px, 0);
+    -khtml-transform: translate3d(-91px, -100px, 0);
+    -moz-transform: translate3d(-91px, -100px, 0);
+    -ms-transform: translate3d(-91px, -100px, 0);
+    -o-transform: translate3d(-91px, -100px, 0);
+    transform: translate3d(-91px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-42px, -42px, 0);
+    -khtml-transform: translate3d(-42px, -42px, 0);
+    -moz-transform: translate3d(-42px, -42px, 0);
+    -ms-transform: translate3d(-42px, -42px, 0);
+    -o-transform: translate3d(-42px, -42px, 0);
+    transform: translate3d(-42px, -42px, 0);
+    -webkit-transform: scaleX(2.5);
+  }
+  100% {
+    -webkit-transform: translate3d(-91px, -100px, my3, 0);
+    -khtml-transform: translate3d(-91px, -100px, my3, 0);
+    -moz-transform: translate3d(-91px, -100px, my3, 0);
+    -ms-transform: translate3d(-91px, -100px, my3, 0);
+    -o-transform: translate3d(-91px, -100px, my3, 0);
+    transform: translate3d(-91px, -100px, my3, 0);
+  }
+}
+@keyframes wiggle2 {
+  0% {
+    -webkit-transform: translate3d(-91px, -100px, 0);
+    -khtml-transform: translate3d(-91px, -100px, 0);
+    -moz-transform: translate3d(-91px, -100px, 0);
+    -ms-transform: translate3d(-91px, -100px, 0);
+    -o-transform: translate3d(-91px, -100px, 0);
+    transform: translate3d(-91px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-42px, -42px, 0);
+    -khtml-transform: translate3d(-42px, -42px, 0);
+    -moz-transform: translate3d(-42px, -42px, 0);
+    -ms-transform: translate3d(-42px, -42px, 0);
+    -o-transform: translate3d(-42px, -42px, 0);
+    transform: translate3d(-42px, -42px, 0);
+    -webkit-transform: scaleX(2.5);
+  }
+  100% {
+    -webkit-transform: translate3d(-91px, -100px, my3, 0);
+    -khtml-transform: translate3d(-91px, -100px, my3, 0);
+    -moz-transform: translate3d(-91px, -100px, my3, 0);
+    -ms-transform: translate3d(-91px, -100px, my3, 0);
+    -o-transform: translate3d(-91px, -100px, my3, 0);
+    transform: translate3d(-91px, -100px, my3, 0);
+  }
+}
+@-webkit-keyframes wiggle3 {
+  0% {
+    -webkit-transform: translate3d(-86px, -100px, 0);
+    -khtml-transform: translate3d(-86px, -100px, 0);
+    -moz-transform: translate3d(-86px, -100px, 0);
+    -ms-transform: translate3d(-86px, -100px, 0);
+    -o-transform: translate3d(-86px, -100px, 0);
+    transform: translate3d(-86px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-78px, 78px, 0);
+    -khtml-transform: translate3d(-78px, 78px, 0);
+    -moz-transform: translate3d(-78px, 78px, 0);
+    -ms-transform: translate3d(-78px, 78px, 0);
+    -o-transform: translate3d(-78px, 78px, 0);
+    transform: translate3d(-78px, 78px, 0);
+    -webkit-transform: scaleX(3);
+  }
+  100% {
+    -webkit-transform: translate3d(-86px, -100px, 0);
+    -khtml-transform: translate3d(-86px, -100px, 0);
+    -moz-transform: translate3d(-86px, -100px, 0);
+    -ms-transform: translate3d(-86px, -100px, 0);
+    -o-transform: translate3d(-86px, -100px, 0);
+    transform: translate3d(-86px, -100px, 0);
+  }
+}
+@-khtml-keyframes wiggle3 {
+  0% {
+    -webkit-transform: translate3d(-86px, -100px, 0);
+    -khtml-transform: translate3d(-86px, -100px, 0);
+    -moz-transform: translate3d(-86px, -100px, 0);
+    -ms-transform: translate3d(-86px, -100px, 0);
+    -o-transform: translate3d(-86px, -100px, 0);
+    transform: translate3d(-86px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-78px, 78px, 0);
+    -khtml-transform: translate3d(-78px, 78px, 0);
+    -moz-transform: translate3d(-78px, 78px, 0);
+    -ms-transform: translate3d(-78px, 78px, 0);
+    -o-transform: translate3d(-78px, 78px, 0);
+    transform: translate3d(-78px, 78px, 0);
+    -webkit-transform: scaleX(3);
+  }
+  100% {
+    -webkit-transform: translate3d(-86px, -100px, 0);
+    -khtml-transform: translate3d(-86px, -100px, 0);
+    -moz-transform: translate3d(-86px, -100px, 0);
+    -ms-transform: translate3d(-86px, -100px, 0);
+    -o-transform: translate3d(-86px, -100px, 0);
+    transform: translate3d(-86px, -100px, 0);
+  }
+}
+@-moz-keyframes wiggle3 {
+  0% {
+    -webkit-transform: translate3d(-86px, -100px, 0);
+    -khtml-transform: translate3d(-86px, -100px, 0);
+    -moz-transform: translate3d(-86px, -100px, 0);
+    -ms-transform: translate3d(-86px, -100px, 0);
+    -o-transform: translate3d(-86px, -100px, 0);
+    transform: translate3d(-86px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-78px, 78px, 0);
+    -khtml-transform: translate3d(-78px, 78px, 0);
+    -moz-transform: translate3d(-78px, 78px, 0);
+    -ms-transform: translate3d(-78px, 78px, 0);
+    -o-transform: translate3d(-78px, 78px, 0);
+    transform: translate3d(-78px, 78px, 0);
+    -webkit-transform: scaleX(3);
+  }
+  100% {
+    -webkit-transform: translate3d(-86px, -100px, 0);
+    -khtml-transform: translate3d(-86px, -100px, 0);
+    -moz-transform: translate3d(-86px, -100px, 0);
+    -ms-transform: translate3d(-86px, -100px, 0);
+    -o-transform: translate3d(-86px, -100px, 0);
+    transform: translate3d(-86px, -100px, 0);
+  }
+}
+@-ms-keyframes wiggle3 {
+  0% {
+    -webkit-transform: translate3d(-86px, -100px, 0);
+    -khtml-transform: translate3d(-86px, -100px, 0);
+    -moz-transform: translate3d(-86px, -100px, 0);
+    -ms-transform: translate3d(-86px, -100px, 0);
+    -o-transform: translate3d(-86px, -100px, 0);
+    transform: translate3d(-86px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-78px, 78px, 0);
+    -khtml-transform: translate3d(-78px, 78px, 0);
+    -moz-transform: translate3d(-78px, 78px, 0);
+    -ms-transform: translate3d(-78px, 78px, 0);
+    -o-transform: translate3d(-78px, 78px, 0);
+    transform: translate3d(-78px, 78px, 0);
+    -webkit-transform: scaleX(3);
+  }
+  100% {
+    -webkit-transform: translate3d(-86px, -100px, 0);
+    -khtml-transform: translate3d(-86px, -100px, 0);
+    -moz-transform: translate3d(-86px, -100px, 0);
+    -ms-transform: translate3d(-86px, -100px, 0);
+    -o-transform: translate3d(-86px, -100px, 0);
+    transform: translate3d(-86px, -100px, 0);
+  }
+}
+@-o-keyframes wiggle3 {
+  0% {
+    -webkit-transform: translate3d(-86px, -100px, 0);
+    -khtml-transform: translate3d(-86px, -100px, 0);
+    -moz-transform: translate3d(-86px, -100px, 0);
+    -ms-transform: translate3d(-86px, -100px, 0);
+    -o-transform: translate3d(-86px, -100px, 0);
+    transform: translate3d(-86px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-78px, 78px, 0);
+    -khtml-transform: translate3d(-78px, 78px, 0);
+    -moz-transform: translate3d(-78px, 78px, 0);
+    -ms-transform: translate3d(-78px, 78px, 0);
+    -o-transform: translate3d(-78px, 78px, 0);
+    transform: translate3d(-78px, 78px, 0);
+    -webkit-transform: scaleX(3);
+  }
+  100% {
+    -webkit-transform: translate3d(-86px, -100px, 0);
+    -khtml-transform: translate3d(-86px, -100px, 0);
+    -moz-transform: translate3d(-86px, -100px, 0);
+    -ms-transform: translate3d(-86px, -100px, 0);
+    -o-transform: translate3d(-86px, -100px, 0);
+    transform: translate3d(-86px, -100px, 0);
+  }
+}
+@keyframes wiggle3 {
+  0% {
+    -webkit-transform: translate3d(-86px, -100px, 0);
+    -khtml-transform: translate3d(-86px, -100px, 0);
+    -moz-transform: translate3d(-86px, -100px, 0);
+    -ms-transform: translate3d(-86px, -100px, 0);
+    -o-transform: translate3d(-86px, -100px, 0);
+    transform: translate3d(-86px, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(-78px, 78px, 0);
+    -khtml-transform: translate3d(-78px, 78px, 0);
+    -moz-transform: translate3d(-78px, 78px, 0);
+    -ms-transform: translate3d(-78px, 78px, 0);
+    -o-transform: translate3d(-78px, 78px, 0);
+    transform: translate3d(-78px, 78px, 0);
+    -webkit-transform: scaleX(3);
+  }
+  100% {
+    -webkit-transform: translate3d(-86px, -100px, 0);
+    -khtml-transform: translate3d(-86px, -100px, 0);
+    -moz-transform: translate3d(-86px, -100px, 0);
+    -ms-transform: translate3d(-86px, -100px, 0);
+    -o-transform: translate3d(-86px, -100px, 0);
+    transform: translate3d(-86px, -100px, 0);
+  }
+}
+@-webkit-keyframes light-field {
+  from {
+    -webkit-box-shadow: 0 0 280px 105px #4fffe1;
+    -khtml-box-shadow: 0 0 280px 105px #4fffe1;
+    -moz-box-shadow: 0 0 280px 105px #4fffe1;
+    -ms-box-shadow: 0 0 280px 105px #4fffe1;
+    -o-box-shadow: 0 0 280px 105px #4fffe1;
+    box-shadow: 0 0 280px 105px #4fffe1;
+  }
+  to {
+    -webkit-box-shadow: 0 0 210px 35px #4fffe1;
+    -khtml-box-shadow: 0 0 210px 35px #4fffe1;
+    -moz-box-shadow: 0 0 210px 35px #4fffe1;
+    -ms-box-shadow: 0 0 210px 35px #4fffe1;
+    -o-box-shadow: 0 0 210px 35px #4fffe1;
+    box-shadow: 0 0 210px 35px #4fffe1;
+  }
+}
+@-khtml-keyframes light-field {
+  from {
+    -webkit-box-shadow: 0 0 280px 105px #4fffe1;
+    -khtml-box-shadow: 0 0 280px 105px #4fffe1;
+    -moz-box-shadow: 0 0 280px 105px #4fffe1;
+    -ms-box-shadow: 0 0 280px 105px #4fffe1;
+    -o-box-shadow: 0 0 280px 105px #4fffe1;
+    box-shadow: 0 0 280px 105px #4fffe1;
+  }
+  to {
+    -webkit-box-shadow: 0 0 210px 35px #4fffe1;
+    -khtml-box-shadow: 0 0 210px 35px #4fffe1;
+    -moz-box-shadow: 0 0 210px 35px #4fffe1;
+    -ms-box-shadow: 0 0 210px 35px #4fffe1;
+    -o-box-shadow: 0 0 210px 35px #4fffe1;
+    box-shadow: 0 0 210px 35px #4fffe1;
+  }
+}
+@-moz-keyframes light-field {
+  from {
+    -webkit-box-shadow: 0 0 280px 105px #4fffe1;
+    -khtml-box-shadow: 0 0 280px 105px #4fffe1;
+    -moz-box-shadow: 0 0 280px 105px #4fffe1;
+    -ms-box-shadow: 0 0 280px 105px #4fffe1;
+    -o-box-shadow: 0 0 280px 105px #4fffe1;
+    box-shadow: 0 0 280px 105px #4fffe1;
+  }
+  to {
+    -webkit-box-shadow: 0 0 210px 35px #4fffe1;
+    -khtml-box-shadow: 0 0 210px 35px #4fffe1;
+    -moz-box-shadow: 0 0 210px 35px #4fffe1;
+    -ms-box-shadow: 0 0 210px 35px #4fffe1;
+    -o-box-shadow: 0 0 210px 35px #4fffe1;
+    box-shadow: 0 0 210px 35px #4fffe1;
+  }
+}
+@-ms-keyframes light-field {
+  from {
+    -webkit-box-shadow: 0 0 280px 105px #4fffe1;
+    -khtml-box-shadow: 0 0 280px 105px #4fffe1;
+    -moz-box-shadow: 0 0 280px 105px #4fffe1;
+    -ms-box-shadow: 0 0 280px 105px #4fffe1;
+    -o-box-shadow: 0 0 280px 105px #4fffe1;
+    box-shadow: 0 0 280px 105px #4fffe1;
+  }
+  to {
+    -webkit-box-shadow: 0 0 210px 35px #4fffe1;
+    -khtml-box-shadow: 0 0 210px 35px #4fffe1;
+    -moz-box-shadow: 0 0 210px 35px #4fffe1;
+    -ms-box-shadow: 0 0 210px 35px #4fffe1;
+    -o-box-shadow: 0 0 210px 35px #4fffe1;
+    box-shadow: 0 0 210px 35px #4fffe1;
+  }
+}
+@-o-keyframes light-field {
+  from {
+    -webkit-box-shadow: 0 0 280px 105px #4fffe1;
+    -khtml-box-shadow: 0 0 280px 105px #4fffe1;
+    -moz-box-shadow: 0 0 280px 105px #4fffe1;
+    -ms-box-shadow: 0 0 280px 105px #4fffe1;
+    -o-box-shadow: 0 0 280px 105px #4fffe1;
+    box-shadow: 0 0 280px 105px #4fffe1;
+  }
+  to {
+    -webkit-box-shadow: 0 0 210px 35px #4fffe1;
+    -khtml-box-shadow: 0 0 210px 35px #4fffe1;
+    -moz-box-shadow: 0 0 210px 35px #4fffe1;
+    -ms-box-shadow: 0 0 210px 35px #4fffe1;
+    -o-box-shadow: 0 0 210px 35px #4fffe1;
+    box-shadow: 0 0 210px 35px #4fffe1;
+  }
+}
+@keyframes light-field {
+  from {
+    -webkit-box-shadow: 0 0 280px 105px #4fffe1;
+    -khtml-box-shadow: 0 0 280px 105px #4fffe1;
+    -moz-box-shadow: 0 0 280px 105px #4fffe1;
+    -ms-box-shadow: 0 0 280px 105px #4fffe1;
+    -o-box-shadow: 0 0 280px 105px #4fffe1;
+    box-shadow: 0 0 280px 105px #4fffe1;
+  }
+  to {
+    -webkit-box-shadow: 0 0 210px 35px #4fffe1;
+    -khtml-box-shadow: 0 0 210px 35px #4fffe1;
+    -moz-box-shadow: 0 0 210px 35px #4fffe1;
+    -ms-box-shadow: 0 0 210px 35px #4fffe1;
+    -o-box-shadow: 0 0 210px 35px #4fffe1;
+    box-shadow: 0 0 210px 35px #4fffe1;
+  }
+}
