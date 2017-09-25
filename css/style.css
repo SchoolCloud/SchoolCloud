@@ -34,6 +34,7 @@ nav img {
 img {
     max-width: 100%;
     height: auto;
+    box-shadow: 3px 4px 8px #222;
 }
 a {
     color: black;
@@ -46,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 5px 0 5px;
 }
 h1 {
-    font-size: 64px;
+    font-size: 80px;
     font-weight: 700;
     margin: 5px 0 15px;
 }
@@ -60,6 +61,7 @@ h3 {
     text-transform: uppercase;
     margin: 5px 0 15px;
     font-family: 'Oxygen', sans-serif;
+    text-shadow: 1px 2px 3px #000;
 }
 h4 {
     font-size: 16px;
@@ -227,8 +229,12 @@ section.callout {
     /*font: 'Raleway', sans-serif;*/
 }
 
+.sectionpad {
+  margin-top: 30px;
+}
+
 #contact{
-    border-bottom: 3.5px solid rgb(244, 205, 118);
+    /*border-bottom: 3.5px solid rgb(244, 205, 118);*/
 }
 
 #products {
@@ -371,7 +377,7 @@ h3>.fa {
     background: rgba(0,5,5,.82);
     box-shadow: 0 0 4px rgba(0, 0, 0, .2);
     padding: 0;
-    border-bottom: 2px solid #F4CD76;
+    border-bottom: 3.5px solid #F4CD76;
 }
 .navbar-color .navbar-brand, .custom-collapse .navbar-brand, .navbar-color .navbar-nav>li>a, .navbar-color .navbar-nav .dropdown-menu>li>a, .custom-collapse .navbar-nav>li>a, .custom-collapse .navbar-nav .dropdown-menu>li>a {
     color: #F7F9F9;
@@ -392,10 +398,12 @@ h3>.fa {
 
 
 #intro {
-    padding: 160px 0 120px 0;
+    padding: 190px 0 120px 0;
     text-align: center;
     color: #F7F9F9;
     text-shadow: 1px 5px 5px black !important;
+    background: url("../img/nightskycartoon.jpg");
+    /*background: url("../img/skybluecloudimage.jpeg");*/
     /*background: url("../img/booksBackground.jpg");*/
     /*background: url("../img/HeaderBackgroundOption2.PNG") ;*/
     background-color: #000033;
@@ -444,6 +452,9 @@ h3>.fa {
 
 #about {
       border-bottom: 3.5px solid rgb(244, 205, 118);
+      /*background-color: #8eabcc;*/
+      background-color: #6c84a0;
+
 }
 
 #mission {
@@ -451,7 +462,7 @@ h3>.fa {
 }
 
 .hello {
-    margin: 0 0 100px;
+    margin: 0 0 15px;
 }
 .page .widget-social li a {
     background: #F4CD76;
@@ -563,10 +574,15 @@ h3>.fa {
 {
   color: #F7F9F9;
 }
-#information, #about, #services, #contact{
+#information, #about, #services {
   padding: 5rem;
 }
 
+
+img {
+  height:200px;
+  width: auto;
+}
 /*#information::before, #about::before, #services::before, #contact::before{
   content:"";
   position: absolute;
@@ -629,4 +645,100 @@ h3>.fa {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*svg animation */
+
+#bearIcon {
+  position: relative;
+  top: -51px;
+  filter: drop-shadow( 1px 5px 2px #000 );
+}
+#layer1{
+  stroke-dasharray: 350;
+  stroke-dashoffset: -350;
+  animation: draw-right 3s ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.8s;
+  stroke: white;
+}
+
+#layer3 {
+  stroke-dasharray: 350;
+  stroke-dashoffset: -350;
+  animation: draw-left 3.3s ease-in reverse;
+  animation-fill-mode: forwards;
+  animation-delay: 1.8s;
+  stroke: white;
+}
+
+.leftEye {
+  stroke-dasharray: 35;
+  stroke-dashoffset: -35;
+  animation-fill-mode: forwards;
+  animation: draw-leftEye 2s forwards;
+  animation-delay: 1.7s;
+  stroke: white;
+}
+
+.rightEye {
+  stroke-dasharray: 35;
+  stroke-dashoffset: -35;
+  animation-fill-mode: forwards;
+  animation: draw-leftEye 2s forwards;
+  animation-delay: 1.7s;
+  stroke: white;
+}
+
+.middleEye {
+  stroke-dasharray: 25;
+  stroke-dashoffset: 0;
+  animation-fill-mode: forwards;
+  animation: draw-middleEye 2s reverse;
+  stroke: white;
+}
+
+@keyframes draw-right {
+  from {
+    stroke-dashoffset: -350;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-left {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 350;
+  }
+}
+
+@keyframes draw-leftEye {
+  from {
+    stroke-dashoffset: -35;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-middleEye {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 25;
+  }
+}
+
+@keyframes draw-rightEye {
+  from {
+    stroke-dashoffset: -35;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
