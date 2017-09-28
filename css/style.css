@@ -238,9 +238,21 @@ section.callout {
 }
 
 #products {
-  background-color: #130526;
-  color: white;
+  background-color: white;
+  color: #130526;
   border-bottom: 3.5px solid rgb(244, 205, 118);
+}
+
+.displayHide {
+  display:none;
+}
+
+.displayShow {
+  display: inline-block;
+}
+
+button {
+   filter: drop-shadow(1px 2px 3px black);
 }
 
 .cardpad {

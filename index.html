@@ -434,24 +434,26 @@
 			<div class="row justify-content-center">
 				<div class="col-md-5 cardpad">
 					<div class="card" style="height: 12rem;">
-						<h2 class="card-text" style="color: black; position: absolute; top: 20%;">Student Finder</h2>
+						<button type="button" class="btn-lg btn btn-info" id="studentFinder" onmouseover="getContent()" style="height: 12rem;">Student Finder</button>
 					</div>
 				</div>
 				<div class="">
 					<div class="col-md-15 cardpad">
-						<div class="card" style="height: 5.5rem; padding: 10px;">
-							<h2 class="card-text" style="color: black;">Attendance</h2>
+						<div class="card" style="height: 5.5rem;">
+							<button type="button" class="btn-lg btn btn-warning" name="button" id="attendance"  onmouseover="getContent()" style="height: 7.5rem;">Attendance</button>
 						</div>
 					</div>
 					<div class="col-md-15 cardpad">
-						<div class="card" style="height: 5.5rem; padding: 10px;">
-							<h2 class="card-text" style="color: black;">Gradebook</h2>
+						<div class="card" style="height: 5.5rem;">
+							<button type="button" class="btn-lg btn btn-success" name="button" id="gradebook"  onmouseover="getContent()" style="height: 7.5rem;">Gradebook</button>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="container" style="border: 2px dotted white; width: 505px; margin-left: 90px;">
-				<p>Content from cards go here!</p>
+			<div class="container" style="border: 2px dotted black; width: 400px; margin-left: 140px;">
+				<p id="studentFinderContent" style="display:inline-block;">Student Finder Content!!</p>
+				<p id="attendanceContent" style="display:none;">Attendance Content!</p>
+				<p id="gradebookContent" style="display:none;">Gradebook Content!!</p>
 			</div>
 		</div>
 
@@ -470,7 +472,7 @@
 				<div class="">
 					<div class="row justify-content-center">
 						<div class="col-md-4" style="margin-top: 10px;">
-							<img src="" alt="Joel's Headshot">
+							<img src="img/JoelHeadshot.jpg" alt="Joel's Headshot">
 							<h3>Joel Gilbert</h3>
 						</div>
 						<div class="col-md-4" style="margin-top: 10px;">
@@ -541,188 +543,6 @@
 	</div>
 <br>
 </section>
-<!-- <section id="services">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 headline wow">
-				<h2>Services</h2>
-			</div>
-			<div class="row">
-				<div class="col-sm-4 wow" data-wow-delay=".2s">
-					<div class="service">
-						<div class="icon">
-							<i class="fa fa-code"></i>
-						</div>
-						<h4>Clean Code</h4>
-						<div class="text">
-							<p>
-								Our platform is easily maintainable and backed up nightly, so you never lose your important information.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4 wow" data-wow-delay=".4s">
-					<div class="service">
-						<div class="icon">
-							<i class="fa fa-desktop"></i>
-						</div>
-						<h4>Responsive Designers</h4>
-						<div class="text">
-							<p>Have a feature you'd like to see us have?  Send us a message!</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4 wow" data-wow-delay=".6s">
-					<div class="service">
-						<div class="icon">
-							<i class="fa fa-life-ring"></i>
-						</div>
-						<h4>Support</h4>
-						<div class="text">
-							<p>Have a problem with the site?  Let us know and it'll be fixed in a a jiffy.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-</section> -->
-
-<!-- <section id="contact" class="section">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 headline wow">
-				<h2>Contact Info</h2>
-			</div>
-		</div>
-		<div class="row contact-items">
-			<div class="col-md-3 wow">
-				<h3>Email</h3>
-			</div>
-			<div class="col-md-6 col-sm-8 contact-item wow">
-				<a href="mailto:admin@schoolcloud.io"><h4>admin@schoolcloud.io</h4></a>
-				<p></p>
-				<hr class="hidden-xs">
-			</div>
-			<div class="col-md-3 col-sm-4 contact-place wow">
-				<h4><i class="fa fa-clock-o"></i> Monday-Friday 7:30AM - 5PM</h4>
-				 <i class="fa fa-calendar"></i> 7:30AM - 5PM
-				<hr class="visible-xs">
-			</div>
-		</div>
-		<div class="row contact-items">
-			<div class="col-md-3 wow">
-				<h3>Phone</h3>
-			</div>
-			<div class="col-md-6 col-sm-8 contact-item wow">
-				<a href="tel:2105045902"><h4>(210) 504-5902</h4></a>
-				<p></p>
-				<hr class="hidden-xs">
-			</div>
-			<div class="col-md-3 col-sm-4 contact-place wow">
-				<h4><i class="fa fa-clock-o"></i> Monday-Friday 7:30AM - 5PM</h4>
-				 <i class="fa fa-calendar"></i> 7:30AM - 5PM
-				<hr class="visible-xs">
-			</div>
-		</div>
-		<div class="row contact-items">
-			<div class="col-md-3 wow">
-				<h3>Visit</h3>
-			</div>
-			<div class="col-md-6 col-sm-8 contact-item wow">
-				<h4><a href="https://goo.gl/maps/umDeCg2tqqF2">Geekdom Offices, San Antonio, Texas</a></h4>
-				<p></p>
-				<hr class="hidden-xs">
-			</div>
-			<div class="col-md-3 col-sm-4 contact-place wow">
-				<h4><i class="fa fa-clock-o"></i> By Appointment Only</h4>
-				 <i class="fa fa-calendar"></i> 7:30AM - 5PM
-				<hr class="visible-xs">
-			</div>
-		</div>
-		<div class="col-md-6 col-md-offset-3 col-sm-8 contact-item wow bounceInUp">
-		<h4>Doctorate of Musical Arts</h4>
-		<p>French Horn Performance</p>
-		<hr class="hidden-xs">
-	</div>
-	<div class="col-md-3 col-sm-4 contact-place wow bounceInRight">
-	<h4><i class="fa fa-suitcase"></i> Arizona State University</h4>
-	<i class="fa fa-calendar"></i> 2012 - 2014
-	<hr class="visible-xs">
-</div>
-<div class="col-md-6 col-md-offset-3 col-sm-8 contact-item wow bounceInUp">
-<h4>Master of Music</h4>
-<p>French Horn Performance</p>
-<hr class="hidden-xs">
-</div>
-<div class="col-md-3 col-sm-4 contact-place wow bounceInRight">
-<h4><i class="fa fa-suitcase"></i>University of Wisconsin</h4>
-<i class="fa fa-calendar"></i> 2010-2012
-<hr class="visible-xs">
-</div>
-<div class="col-md-6 col-md-offset-3 col-sm-8 contact-item wow bounceInUp">
-<h4>Bachelor of Music</h4>
-<p>French Horn Performance</p>
-<hr class="hidden-xs">
-</div>
-<div class="col-md-3 col-sm-4 contact-place wow bounceInRight">
-<h4><i class="fa fa-suitcase"></i>Susquehanna University</h4>
-<i class="fa fa-calendar"></i> 2008-2010
-<hr class="visible-xs">
-</div>
-</div>
-<div class="row contact-items">
-<div class="col-md-3 wow bounceInLeft">
-<h3>Experience</h3>
-</div>
-<div class="col-md-6 col-sm-8 contact-item wow bounceInUp">
-<h4>Lead Teacher</h4>
-<li>Taught 5th Grade Math with a 100% STAAR pass rate</li>
-<li>Managed Teaching Apprentices and collaborated with other faculty</li>
-<li>Handled teacher/parent communication </li>
-<li>Ensured class met state education requirements/fulfillment of 504/IEP plans</li>
-<li>Graded student work daily and ensured student discipline</li>
-<hr class="hidden-xs">
-</div>
-
-<div class="col-md-3 col-sm-4 contact-place wow bounceInRight">
-<h4><i class="fa fa-suitcase"></i>Great Hearts America</h4>
-<i class="fa fa-calendar"></i> 2014 - 2017
-<hr class="visible-xs">
-</div>
-<div class="col-md-6 col-md-offset-3 col-sm-8 contact-item wow bounceInUp">
-<h4>Horn Instructor</h4>
-<li>Taught, recruited, and networked for the college</li>
-<hr class="hidden-xs">
-</div>
-
-<div class="col-md-3 col-sm-4 contact-place wow bounceInRight">
-<h4><i class="fa fa-suitcase"></i>Yavapai College</h4>
-<i class="fa fa-calendar"></i> 2014 - 2015
-<hr class="visible-xs">
-</div>
-<div class="col-md-6 col-md-offset-3 col-sm-8 contact-item wow bounceInUp">
-<h4>Information Systems Data Services Professional</h4>
-<li>Provided Tier 3 technology support/troubleshooting for the HSLC staff/faculty</li>
-<li>Managed 200 workstations and 20 print stations</li>
-<li>Managed Microsoft Active Directory and MS SQL Servers </li>
-<li>Setup and managed Windows printer servers (Windows server 2008 R2)</li>
-<li>Provided VPN and network troubleshooting</li>
-<li>Performed hardware repairs, virus removal, and data migrations</li>
-<li>Discretely imaged/migrated data/deployed updated images/hardware</li>
-<li>Created knowledgebase documents for both staff and faculty</li>
-<li>Helped begin implementation of a VM network for the medical school</li>
-<hr class="hidden-xs">
-</div>
-
-<div class="col-md-3 col-sm-4 contact-place wow bounceInRight">
-<h4><i class="fa fa-suitcase"></i>Health Sciences Learning Center - University of Wisconsin</h4>
-<i class="fa fa-calendar"></i> 2010 - 2012
-<hr class="visible-xs">
-</div>
-</div>
-</section> -->
 <footer id="footer">
 	<div class="container">
 		<div class="row">
@@ -765,6 +585,26 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script type="text/javascript">
+ function getContent() {
+	 $("#studentFinder").hover(function() {
+		 $("#studentFinderContent").show();
+		 $("#attendanceContent").hide();
+		 $("#gradebookContent").hide();
+	 });
+	 $("#attendance").hover(function() {
+		 $("#attendanceContent").show();
+		 $("#studentFinderContent").hide();
+		 $("#gradebookContent").hide();
+	 });
+	 $("#gradebook").hover(function() {
+		 $("#gradebookContent").show();
+		 $("#studentFinderContent").hide();
+		 $("#attendanceContent").hide();
+	 });
+ }
+
+</script>
 <!-- End Scripts -->
 </body>
 
