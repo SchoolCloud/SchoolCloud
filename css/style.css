@@ -32,9 +32,10 @@ nav img {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     box-shadow: 3px 4px 8px #222;
+    border-radius: 10px;
 }
 a {
     color: black;
@@ -469,6 +470,11 @@ h3>.fa {
 
 }
 
+.headshot-card {
+  margin: 20px 10px 20px 35px;
+  width: 33%;
+}
+
 #mission {
   margin-top: 50px;
 }
@@ -590,11 +596,6 @@ h3>.fa {
   padding: 5rem;
 }
 
-
-img {
-  height:200px;
-  width: auto;
-}
 /*#information::before, #about::before, #services::before, #contact::before{
   content:"";
   position: absolute;
