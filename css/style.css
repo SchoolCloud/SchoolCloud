@@ -244,6 +244,13 @@ section.callout {
   border-bottom: 3.5px solid rgb(244, 205, 118);
 }
 
+#products h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+  color: #0f0f2a;
+  text-shadow: 1px 2px 3px #747475;
+}
+
 .displayHide {
   display:none;
 }
@@ -273,8 +280,8 @@ button {
     font-family: 'Raleway', sans-serif;
     font-size: 2.5rem;
     text-transform: capitalize;
-
 }
+
 .headline {
     margin: 0 0 60px;
 }
@@ -469,6 +476,43 @@ h3>.fa {
       background-color: #6c84a0;
 
 }
+
+.sub-h3 {
+      color: #F4CD76;
+      font-size: 1.5rem;
+      font-weight: lighter;
+      margin: 5px 0 15px;
+      font-family: 'Oxygen', sans-serif;
+      text-shadow: 1px 2px 3px #000;
+}
+
+#studentFinder span {
+  font-size: 2.8rem;
+  position: relative;
+  left: -316px;
+  bottom: 23px;
+}
+
+#attendance span {
+    font-size: 2.8rem;
+    position: relative;
+    left: -296px;
+    bottom: 20px;
+}
+
+#gradebook span {
+    font-size: 2.8rem;
+    position: relative;
+    left: -296px;
+    bottom: 23px;
+}
+/*
+#about h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+  color: #0f0f2a;
+  text-shadow: 1px 2px 3px #747475;
+}*/
 
 .headshot-card {
   margin: 20px 10px 20px 35px;
