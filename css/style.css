@@ -706,6 +706,22 @@ h3>.fa {
 
 /*svg animation */
 
+/*cloud animation*/
+.cloud {
+  background-image: url('http://cmagruder.me/content/home/clouds.png');
+  background-position: 0px 0px;
+	background-repeat: repeat-x, repeat-y;
+  background-size: cover;
+  height: 100%;
+  opacity: 0.8;
+  animation: cloud 100s linear infinite;
+}
+
+@keyframes cloud {
+   100% { background-position: -1900px; }
+}
+
+/*Bear Icon*/
 #bearIcon {
   position: relative;
   top: -51px;
