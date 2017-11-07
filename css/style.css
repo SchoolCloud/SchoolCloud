@@ -470,19 +470,19 @@ h3>.fa {
     transition: opacity 0.5s, visibility 0.5s;
   }*/
 
-#about {
+#team {
       border-bottom: 3.5px solid rgb(244, 205, 118);
       /*background-color: #8eabcc;*/
       background-color: #6c84a0;
 
 }
 
-#aboutSC {
+#about {
       border-bottom: 3.5px solid rgb(244, 205, 118);
       background-color: #d2d2dd;
 }
 
-#aboutSC h3 {
+#about h3 {
     color: #000033;
     text-shadow: 1px 2px 3px #6d592c;
 }
@@ -646,7 +646,7 @@ h3>.fa {
 {
   color: #F7F9F9;
 }
-#information, #about, #services {
+#information, #team, #services {
   padding: 5rem;
 }
 
