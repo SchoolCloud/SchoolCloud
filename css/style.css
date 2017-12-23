@@ -34,7 +34,7 @@ nav img {
 img {
     width: 100%;
     height: auto;
-    box-shadow: 3px 4px 8px #222;
+    /*box-shadow: 3px 4px 8px #222;*/
     border-radius: 10px;
 }
 a {
@@ -62,7 +62,7 @@ h3 {
     text-transform: uppercase;
     margin: 5px 0 15px;
     font-family: 'Oxygen', sans-serif;
-    text-shadow: 1px 2px 3px #000;
+    /*text-shadow: 1px 2px 3px #000;*/
 }
 h4 {
     font-size: 16px;
@@ -234,21 +234,16 @@ section.callout {
   margin-top: 30px;
 }
 
-#contact{
-    /*border-bottom: 3.5px solid rgb(244, 205, 118);*/
-}
-
 #products {
-  background-color: white;
   color: #130526;
-  border-bottom: 3.5px solid rgb(244, 205, 118);
+  height: 50vw;
+  background: linear-gradient(to top left, #6c84a0, white);
 }
 
 #products h3 {
   font-family: 'Raleway', sans-serif;
   font-weight: bolder;
   color: #0f0f2a;
-  text-shadow: 1px 2px 3px #747475;
 }
 
 .displayHide {
@@ -257,10 +252,6 @@ section.callout {
 
 .displayShow {
   display: inline-block;
-}
-
-button {
-   filter: drop-shadow(1px 2px 3px black);
 }
 
 .cardpad {
@@ -363,11 +354,7 @@ h3>.fa {
     }
 }
 .navbar {
-    /*background: rgba(128,0,0,.9);*/
-    background-color: #0f0f2a;
-    border-bottom: 3.5px solid rgb(244, 205, 118);
     border-radius: 0;
-    /*border: 0;*/
     padding: 10px 0;
     text-transform: uppercase;
     color: #800000 !important;
@@ -418,73 +405,41 @@ h3>.fa {
 
 
 #intro {
-    padding: 190px 0 120px 0;
+    padding: 200px 0 140px 0;
     text-align: center;
     color: #F7F9F9;
-    text-shadow: 1px 5px 5px black !important;
     background: url("../img/nightskycartoon.jpg");
-    /*background: url("../img/skybluecloudimage.jpeg");*/
-    /*background: url("../img/booksBackground.jpg");*/
-    /*background: url("../img/HeaderBackgroundOption2.PNG") ;*/
     background-color: #000033;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-    border-bottom: 3.5px solid rgb(244, 205, 118);
+    /*border-bottom: 3.5px solid rgb(244, 205, 118);*/
 }
 #intro h1, #intro h2, #intro h3, #intro h4, #intro h5, #intro h6 {
     color: #red;
 }
 #intro h3 {
     color: #F7F9F9;
-    text-shadow: 1px 5px 5px black !important;
     font-family: 'Raleway', sans-serif;
 }
-/*.share-socials, .share-email {
-    vertical-align: top;
-    display: inline-block;
-    font-family: 'open_sansbold', Arial, sans-serif;
-    font-size: 12px;
-    line-height: 28px;
-    margin-left: 12px;
-    position: relative;
-    z-index: 10;
-}
-.share-social {
-    padding-left: 33px;
-    line-height: 28px;
-    position: relative;
-    cursor: pointer;
-}
-.last-social {
-    position: absolute;
-    left: -15px;
-    top: 40px;
-    opacity: 0;
-    visibility: hidden;
-    background: #e0e0e0;
-    width: 60px;
-    padding: 18px 0 1px;
-    -webkit-transition: opacity 0.5s, visibility 0.5s;
-    transition: opacity 0.5s, visibility 0.5s;
-  }*/
 
 #team {
       border-bottom: 3.5px solid rgb(244, 205, 118);
-      /*background-color: #8eabcc;*/
       background-color: #6c84a0;
-
 }
 
 #about {
-      border-bottom: 3.5px solid rgb(244, 205, 118);
-      background-color: #d2d2dd;
+  padding-top: 60px;
+      color: white;
+      height:50vw;
+      background-color: #395875;
+      background: radial-gradient(#395875 45%, #6c84a0);
 }
 
 #about h3 {
-    color: #000033;
-    text-shadow: 1px 2px 3px #6d592c;
+    color: white;
+    padding-bottom: 1rem;
 }
 
 .sub-h3 {
@@ -493,7 +448,7 @@ h3>.fa {
       font-weight: lighter;
       margin: 5px 0 15px;
       font-family: 'Oxygen', sans-serif;
-      text-shadow: 1px 2px 3px #000;
+      /*text-shadow: 1px 2px 3px #000;*/
 }
 
 #studentFinder span {
@@ -501,6 +456,21 @@ h3>.fa {
   position: relative;
   left: -316px;
   bottom: 23px;
+}
+
+#studentFinder {
+  color: #ffd902;
+  background-color: #000033;
+}
+
+#attendance {
+  color: #ffd902;
+  background-color: #000033;
+}
+
+#gradebook {
+  color: #ffd902;
+  background-color: #000033;
 }
 
 #attendance span {
@@ -516,13 +486,6 @@ h3>.fa {
     left: -296px;
     bottom: 23px;
 }
-/*
-#about h3 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: bolder;
-  color: #0f0f2a;
-  text-shadow: 1px 2px 3px #747475;
-}*/
 
 .headshot-card {
   margin: 20px 10px 20px 35px;
@@ -540,7 +503,6 @@ h3>.fa {
     background: #F4CD76;
 }
 #about-contact {
-    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
     padding: 20px 0;
     border-top: 5px solid #F4CD76;
 }
@@ -735,14 +697,27 @@ h3>.fa {
 #bearIcon {
   position: relative;
   top: -51px;
-  filter: drop-shadow( 1px 5px 2px #000 );
+  /*filter: drop-shadow( 1px 5px 2px #000 );*/
+  animation: bearStartAnimation 4s;
 }
+
+@keyframes bearStartAnimation {
+  from {
+    top: -200px;
+    /*filter: drop-shadow( 0px 0px 0px #FFF);*/
+  }
+  to {
+    top: -51px;
+    /*filter: drop-shadow( 1px 5px 2px #000 );*/
+  }
+}
+
 #layer1{
   stroke-dasharray: 350;
   stroke-dashoffset: -350;
   animation: draw-right 3s ease-out;
   animation-fill-mode: forwards;
-  animation-delay: 1.8s;
+  animation-delay: 4s;
   stroke: white;
 }
 
@@ -751,7 +726,7 @@ h3>.fa {
   stroke-dashoffset: -350;
   animation: draw-left 3.3s ease-in reverse;
   animation-fill-mode: forwards;
-  animation-delay: 1.8s;
+  animation-delay: 4s;
   stroke: white;
 }
 
@@ -760,7 +735,7 @@ h3>.fa {
   stroke-dashoffset: -35;
   animation-fill-mode: forwards;
   animation: draw-leftEye 2s forwards;
-  animation-delay: 1.7s;
+  animation-delay: 4s;
   stroke: white;
 }
 
@@ -769,7 +744,7 @@ h3>.fa {
   stroke-dashoffset: -35;
   animation-fill-mode: forwards;
   animation: draw-leftEye 2s forwards;
-  animation-delay: 1.7s;
+  animation-delay: 4s;
   stroke: white;
 }
 
@@ -777,7 +752,7 @@ h3>.fa {
   stroke-dasharray: 25;
   stroke-dashoffset: 0;
   animation-fill-mode: forwards;
-  animation: draw-middleEye 2s reverse;
+  animation: draw-middleEye 5s reverse;
   stroke: white;
 }
 
@@ -823,5 +798,39 @@ h3>.fa {
   }
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+.scTitle {
+  opacity: 1.0;
+  animation: scTitleFadeIn 6s ease-in;
+}
+
+@keyframes scTitleFadeIn {
+  0% {
+    opacity: 0.0;
+  }
+  60% {
+    opacity: 0.0;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+
+.menu-fadeIn {
+   opacity: 1.0;
+   animation: menuFadeIn 6s ease-in;
+}
+
+@keyframes menuFadeIn {
+  0% {
+    opacity: 0.0;
+  }
+  60% {
+    opacity: 0.0;
+  }
+  to {
+    opacity: 1.0;
   }
 }
