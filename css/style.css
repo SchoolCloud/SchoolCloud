@@ -23,6 +23,10 @@ body {
     -o-background-size:cover;
 }
 
+body, html {
+  height: 100%;
+}
+
 nav img {
   max-width: 30px;
   max-height: 30px;
@@ -425,8 +429,9 @@ h3>.fa {
 }
 
 #team {
-      border-bottom: 3.5px solid rgb(244, 205, 118);
+      /* border-bottom: 3.5px solid rgb(244, 205, 118); */
       background-color: #6c84a0;
+      background: radial-gradient(#6c84a0 45%, #395875);
 }
 
 #about {
@@ -442,10 +447,20 @@ h3>.fa {
     padding-bottom: 1rem;
 }
 
+.team-title span{
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+  color: #0f0f2a;
+  /* color: ##0f0f2a; */
+  border-bottom: 2px solid #F4CD76;
+}
+
+
+
 .sub-h3 {
-      color: #F4CD76;
+      /* color: #F4CD76; */
       font-size: 1.5rem;
-      font-weight: lighter;
+      font-weight: bolder;
       margin: 5px 0 15px;
       font-family: 'Oxygen', sans-serif;
       /*text-shadow: 1px 2px 3px #000;*/
@@ -487,9 +502,32 @@ h3>.fa {
     bottom: 23px;
 }
 
+#studentFinderContent span {
+    border-bottom: 2px solid #F4CD76;
+    font-weight: bolder;
+}
+
+#attendanceContent span {
+  border-bottom: 2px solid #F4CD76;
+  font-weight: bolder;
+}
+
+#gradebookContent span {
+  border-bottom: 2px solid #F4CD76;
+  font-weight: bolder;
+}
+
 .headshot-card {
-  margin: 20px 10px 20px 35px;
-  width: 33%;
+  margin:0px 30px 0px 30px;
+  width: 12%;
+}
+
+.card-img {
+  border-radius: 80px;
+}
+
+.leftText {
+  text-align: end;
 }
 
 #mission {
@@ -504,7 +542,7 @@ h3>.fa {
 }
 #about-contact {
     padding: 20px 0;
-    border-top: 5px solid #F4CD76;
+    /* border-top: 5px solid #F4CD76; */
 }
 .about-item i {
     display: block;
