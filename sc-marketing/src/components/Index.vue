@@ -1,10 +1,10 @@
 <template>
   <div class="index-content">
     <div class="jumbotron jumbotron-fluid bg-info mb-0 p-0">
-      <b-carousel class="" style="min-height:50rem; min-width:50rem;" indicators img-width="100vh" img-height="100vh">
-        <b-carousel-slide class="bg-success" caption="First Slide" text="This is the text of the first slide">Slide 1</b-carousel-slide>
-        <b-carousel-slide class="bg-warning" caption="Second Slide" text="This is the text of the second slide">Slide 2</b-carousel-slide>
-        <b-carousel-slide class="bg-danger " caption="Third Slide" text="This is the text of the third slide">Slide 3</b-carousel-slide>
+      <b-carousel indicators style="height:95vh;">
+        <b-carousel-slide style="height:95vh;" class="bg-success" caption="First Slide" text="This is the text of the first slide">Slide 1</b-carousel-slide>
+        <b-carousel-slide style="height:95vh;" class="bg-warning" caption="Second Slide" text="This is the text of the second slide">Slide 2</b-carousel-slide>
+        <b-carousel-slide style="height:95vh;" class="bg-danger " caption="Third Slide" text="This is the text of the third slide">Slide 3</b-carousel-slide>
       </b-carousel>
       <!-- <div class="container">
         <div class="display-4">
