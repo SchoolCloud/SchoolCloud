@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/schoolcloud.github.io/docs/',
+    assetsPublicPath: '../schoolcloud.github.io/docs/',
     
 
     /**
