@@ -4,7 +4,7 @@
       <div class="container position-absolute">
             <div class="align-content-center justify-content-center brand pt-4">
               <!-- Icon Display -->
-              <svg
+              <!-- <svg
                   xmlns:dc="http://purl.org/dc/elements/1.1/"
                   xmlns:cc="http://creativecommons.org/ns#"
                   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -276,26 +276,14 @@
                          style="fill:#000000;stroke:#000000;stroke-width:1.74976325;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal" />
                     </g>
                   </g>
-              </svg>
+              </svg> -->
             </div>
           </div>
       <b-carousel indicators style="height:95vh;">
-        <b-carousel-slide style="height:95vh;" class="bg-success" caption="First Slide" text="This is the text of the first slide">Slide 1
-          
-        </b-carousel-slide>
+        <b-carousel-slide style="height:95vh;" class="bg-success" caption="First Slide" text="This is the text of the first slide">Slide 1</b-carousel-slide>
         <b-carousel-slide style="height:95vh;" class="bg-warning" caption="Second Slide" text="This is the text of the second slide">Slide 2</b-carousel-slide>
         <b-carousel-slide style="height:95vh;" class="bg-danger " caption="Third Slide" text="This is the text of the third slide">Slide 3</b-carousel-slide>
-      </b-carousel>
-      <!-- <div class="container">
-        <div class="display-4">
-          Bear Icon
-        </div>
-      </div> -->
-      <!-- <div class="container position-static">
-        <div class="content-center brand">
-            <img src="/dist/static/images/bearCubIcon.svg">
-        </div>
-      </div> -->
+      </b-carousel>      
     </div>
     <!-- About Section -->
     <div id="AboutSection" class="text-center bg-warning mb-4">

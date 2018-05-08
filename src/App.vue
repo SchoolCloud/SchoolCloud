@@ -6,13 +6,14 @@
       <router-view/>
     </transition>
     <ContactPartial id="ContactPartial"></ContactPartial>
-    <Footer id="Footer"></Footer>
+    <SCFooter id="Footer"></SCFooter>
   </div>
 </template>
 
 <script>
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import axios from 'axios'
 
 import Navigation from './components/Nav'
 import Footer from './components/Footer'
@@ -22,10 +23,12 @@ export default {
   name: 'App',
   components: {
     'Navigation': Navigation,
-    'Footer': Footer,
+    'SCFooter': Footer,
     'ContactPartial': ContactPartial
   }
 }
+
+
 </script>
 
 <style>

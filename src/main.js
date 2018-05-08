@@ -12,4 +12,31 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
-})
+});
+
+var form = new Vue({
+  el: '#contactForm',
+  data: {
+      form:{
+          name,
+          email,
+          message
+      }
+  },
+  methods: {
+      submitContact: function(e){
+          axiox.post(e.target.action, 
+              {
+                name: e.name,
+                email: e.email,
+                message: e.message
+              })
+              .then(function (response) {
+                  console.log(response);
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
+      }
+  }
+});
